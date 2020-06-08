@@ -1,0 +1,59 @@
+html,
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #716F72;
+}
+
+.container {
+    display: grid;
+    margin: 0 auto;
+    max-width: 80vw;
+    height: 100%;
+    grid-template-areas: "header header header" "nav main right" "footer footer footer";
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-rows: 160px 1fr 120px;
+    gap: 1rem;
+}
+
+.container>div {
+    /* border: 1px dashed #888; */
+}
+
+.header {
+    text-align: center;
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+    text-align: right;
+}
+
+.main {
+    grid-area: main;
+}
+
+.right {
+    grid-area: right;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+ul {
+    margin: 0 auto;
+}
+
+ul>li {
+    list-style-type: none;
+}
+
+ul>li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #716F72;
+}
+
+#socialIcon {}
