@@ -29,6 +29,8 @@ body {
 .nav {
     grid-area: nav;
     text-align: right;
+    /* position: fixed;
+    top: 200px; */
 }
 
 .main {
@@ -57,6 +59,7 @@ section>div {
 
 .cardset-3 {
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-around;
 }
 
@@ -67,6 +70,14 @@ section>div {
 
 .circle {
     border-radius: 100%;
+    transition: all 0.3s;
+}
+
+.circle:hover {
+    border-radius: 100%;
+    transform: scale(1.1);
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
 }
 
 #testicard h5 {
@@ -74,7 +85,11 @@ section>div {
     text-align: right;
 }
 
-#testicard p::before {
+
+/* Needs Quote tag!! */
+
+
+/* #testicard p::before {
     content: '"';
     position: relative;
     top: -5px;
@@ -88,7 +103,7 @@ section>div {
     bottom: 5px;
     font-size: 1em;
     color: #d99e87;
-}
+} */
 
 ul {
     margin: 0 auto;
@@ -104,4 +119,19 @@ ul>li a {
     color: #716f72;
 }
 
-#socialIcon {}
+
+/* ul>li a:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #716f72;
+} */
+
+.icon-btn {
+    transition: all 0.3s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
+}
