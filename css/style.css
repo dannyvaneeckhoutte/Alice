@@ -97,6 +97,8 @@ header {
 
 .navbar {
     flex-direction: column;
+    /* position: fixed; */
+    /* werkt niet, logo springt naar links */
 }
 
 .logo {
@@ -121,7 +123,7 @@ header {
 }
 
 
-/* for edge-to-edge background color */
+/* edge-to-edge background color */
 
 .bg-grey {
     background-color: var(--dark-opacity-01);
@@ -149,4 +151,24 @@ footer {
 
 .map {
     margin-right: 30px;
+}
+
+
+/* Buttons & elements */
+
+button {
+    /* inline-block om button even groot dan tekst te houden */
+    display: inline-block;
+    margin: 15px 0% 5px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 3px;
+    outline: 0;
+    background: var(--purple);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    /* box-shadow: 0 1px 2px var(--black); */
+    /* transition: box-shadow 0.4s ease; */
 }
