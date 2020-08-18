@@ -30,7 +30,7 @@ body {
 
 .section p {
     margin: 15px auto;
-    max-width: 60%;
+    max-width: 80%;
     /* text-align: center; */
 }
 
@@ -69,17 +69,19 @@ i.fab {
 }
 
 .container {
-    max-width: 80vw;
     margin: 0 auto;
 }
 
 .switch-wrapper {
+    max-width: 90vw;
+    margin: 0 auto;
     color: var(--medium-grey);
     justify-content: flex-end;
     align-items: center;
 }
 
 header {
+    max-width: 90vw;
     justify-content: space-between;
     height: auto;
     margin: 30px auto;
@@ -113,14 +115,15 @@ header {
 }
 
 .section {
+    max-width: 70vw;
+    margin: 0 auto;
     padding: 40px 0;
 }
 
-.section.section-do {
-    background-color: var(--dark-opacity-01);
-}
 
-.section.section-bestel {
+/* for edge-to-edge background color */
+
+.bg-grey {
     background-color: var(--dark-opacity-01);
 }
 
@@ -133,7 +136,9 @@ header {
 }
 
 .img-round {
+    max-width: 180px;
     border-radius: 50%;
+    margin: 15px;
 }
 
 footer {
