@@ -1,107 +1,117 @@
 /* colors */
+
 :root {
-  --black: #1D1C1D;
-  --dark-grey: #716F72;
-  --medium-grey: #CCCCCC;
-  --white: #FAFAFA;
-  --orange: #D99E87;
-  --red: #C56950;
-  --yellow: #ECCB83;
-  --purple: #A594BD;
-  --blue: #7FB9BF;
-  --dark-opacity-01: rgba(113, 111, 114, 0.1);
-  --facebook: #1778f2;
-  --instagram: #de3964;
+    --black: #1d1c1d;
+    --dark-grey: #716f72;
+    --medium-grey: #cccccc;
+    --white: #fafafa;
+    --orange: #d99e87;
+    --red: #c56950;
+    --yellow: #eccb83;
+    --purple: #a594bd;
+    --blue: #7fb9bf;
+    --dark-opacity-01: rgba(113, 111, 114, 0.1);
+    --facebook: #1778f2;
+    --instagram: #de3964;
 }
 
+
 /* typography */
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--black);
-  color: var(--white);
+    font-family: "Roboto", sans-serif;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 a {
-  text-decoration: none;
-  color: var(--white);
-  display: block;
+    text-decoration: none;
+    color: var(--white);
+    display: block;
 }
 
 a.active {
-  color: var(--orange);
+    color: var(--orange);
 }
 
 i.fab {
-  color: var(--white);
+    color: var(--white);
 }
 
 .fa-facebook-square:hover {
-  color: var(--facebook);
+    color: var(--facebook);
 }
 
 .fa-instagram-square:hover {
-  color: var(--instagram);
+    color: var(--instagram);
 }
 
-fa.lightbulb {
-  color: var(--medium-grey);
+.fa-lightbulb {
+    color: var(--medium-grey);
+    margin-left: 10px;
 }
+
 
 /* layout */
+
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .container {
-  max-width: 80vw;
-  margin: 0 auto;
+    max-width: 80vw;
+    margin: 0 auto;
 }
 
-.switch-wrapper {}
+.switch-wrapper {
+    color: var(--medium-grey);
+    justify-content: flex-end;
+    align-items: center;
+}
 
 header {
-  justify-content: space-between;
-  height: auto;
-  margin: 30px auto;
+    justify-content: space-between;
+    height: auto;
+    margin: 30px auto;
 }
 
 .header-25 {
-  width: 25%;
+    width: 25%;
 }
 
 .header-50 {
-  width: 50%;
+    width: 50%;
 }
 
 .navbar {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .logo {
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .social {
-  text-align: right;
-  justify-content: flex-end;
-  flex-direction: column;
+    text-align: right;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .section-wrapper {
-  text-align: center;
+    text-align: center;
 }
 
 .section-wrapper div:nth-of-type(even) {
-  background-color: var(--dark-opacity-01);
+    background-color: var(--dark-opacity-01);
 }
 
 footer {
-  padding: 30px;
-  background-color: var(--dark-opacity-01);
-  justify-content: center;
+    padding: 30px;
+    background-color: var(--dark-opacity-01);
+    justify-content: center;
 }
 
 .map {
-  margin-right: 30px;
+    margin-right: 30px;
 }
