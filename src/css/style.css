@@ -24,6 +24,16 @@ body {
     color: var(--white);
 }
 
+.section h3 {
+    color: var(--orange);
+}
+
+.section p {
+    margin: 15px auto;
+    max-width: 60%;
+    /* text-align: center; */
+}
+
 a {
     text-decoration: none;
     color: var(--white);
@@ -102,8 +112,28 @@ header {
     text-align: center;
 }
 
-.section-wrapper div:nth-of-type(even) {
+.section {
+    padding: 40px 0;
+}
+
+.section.section-do {
     background-color: var(--dark-opacity-01);
+}
+
+.section.section-bestel {
+    background-color: var(--dark-opacity-01);
+}
+
+.home-detail {
+    justify-content: space-between;
+}
+
+.intro {
+    padding-bottom: 30px;
+}
+
+.img-round {
+    border-radius: 50%;
 }
 
 footer {
