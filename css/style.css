@@ -21,8 +21,15 @@ body {
   color: var(--white);
 }
 
-.section h3 {
-  color: var(--orange);
+.menu-title {
+  display: block;
+  padding: 5px 0;
+  margin: 0;
+  color: var(--white);
+}
+
+.menu-eat h3 {
+  color: var(--red);
 }
 
 .section p {
@@ -66,6 +73,10 @@ i.fab {
 
 .container {
   margin: 0 auto;
+}
+
+img {
+  margin: 0;
 }
 
 .switch-wrapper {
@@ -142,6 +153,22 @@ footer {
   margin-right: 30px;
 }
 
+/* table */
+table {
+  margin: 15px 0 80px;
+}
+
+table, th, td {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px dotted var(--white);
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+}
+
 /* Buttons */
 button {
   /* inline-block om button even groot dan tekst te houden */
@@ -164,7 +191,6 @@ button {
 }
 
 .navbar a:hover {
-  font-weight: 700;
   color: var(--orange);
 }
 
@@ -179,12 +205,29 @@ button {
   overflow: hidden;
   max-height: 0;
   transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
 }
 
 .submenu a {}
 
 .submenu a:hover {}
+
+/* navbar horizontal */
+.navbar-horizontal {
+  justify-content: center;
+  /* color: var(--red)); */
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.navbar-horizontal a {
+  display: inline-block;
+  color: var(--red));
+}
+
+.navbar-horizontal a+a:before {
+  content: " | ";
+  padding: 0 10px;
+}
 
 /* bestelformulier */
 .form-wrapper {
@@ -195,12 +238,10 @@ button {
 .form-row {
   display: flex;
   justify-content: flex-end;
-  padding: 0.3em;
+  padding: 0.3em 0 0.1em;
 }
 
-.form-row>label {
-  padding: 0.1em 1em;
-}
+.form-row>label {}
 
 .form-row>input {
   width: 60px;
