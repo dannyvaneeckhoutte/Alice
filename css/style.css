@@ -21,21 +21,28 @@ body {
   color: var(--white);
 }
 
+h3.page-title-eat {
+  color: var(--red);
+}
+
 .menu-title {
   display: block;
   padding: 5px 0;
-  margin: 0;
+  margin-top: 0;
   color: var(--white);
 }
 
-.menu-eat h3 {
-  color: var(--red);
+.menu-title-eat {
+  background-color: var(--red);
+}
+
+.menu-title-drink {
+  background-color: var(--yellow);
 }
 
 .section p {
   margin: 15px auto;
   max-width: 80%;
-  /* text-align: center; */
 }
 
 a {
