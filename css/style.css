@@ -272,30 +272,6 @@ button.btn:hover {
     transition: all 0.5s ease-out;
 }
 
-.submenu a {}
-
-.submenu a:hover {}
-
-
-/* navbar horizontal */
-
-.navbar-horizontal {
-    justify-content: center;
-    /* color: var(--red)); */
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.navbar-horizontal a {
-    display: inline-block;
-    color: var(--red));
-}
-
-.navbar-horizontal a+a:before {
-    content: " | ";
-    padding: 0 10px;
-}
-
 
 /* bestelformulier */
 
@@ -310,7 +286,8 @@ button.btn:hover {
     padding: 0.3em 0 0.1em;
 }
 
-.form-row>label {}
+
+/* .form-row>label {} */
 
 .form-row>input {
     width: 60px;
