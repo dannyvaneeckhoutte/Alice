@@ -1,266 +1,345 @@
 /* colors */
+
 :root {
-  --black: #1d1c1d;
-  --dark-grey: #716f72;
-  --medium-grey: #cccccc;
-  --white: #fafafa;
-  --orange: #d99e87;
-  --red: #c56950;
-  --yellow: #eccb83;
-  --purple: #a594bd;
-  --blue: #7fb9bf;
-  --dark-opacity-01: rgba(113, 111, 114, 0.1);
-  --facebook: #1778f2;
-  --instagram: #de3964;
+    --black: #1d1c1d;
+    --dark-grey: #716f72;
+    --medium-grey: #cccccc;
+    --white: #fafafa;
+    --orange: #d99e87;
+    --red: #c56950;
+    --yellow: #eccb83;
+    --purple: #a594bd;
+    --purple-dark: #9e83c7;
+    --blue: #7fb9bf;
+    --dark-opacity-01: rgba(113, 111, 114, 0.1);
+    --facebook: #1778f2;
+    --instagram: #de3964;
 }
 
+
 /* typography */
+
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--black);
-  color: var(--white);
+    font-family: "Roboto", sans-serif;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 h3.page-title-eat {
-  color: var(--red);
+    color: var(--red);
 }
 
 .menu-title {
-  display: block;
-  padding: 5px 0;
-  margin-top: 0;
-  color: var(--white);
+    display: block;
+    padding: 5px 0;
+    margin-top: 0;
+    color: var(--white);
 }
 
 .menu-title-eat {
-  background-color: var(--red);
+    background-color: var(--red);
 }
 
 .menu-title-drink {
-  background-color: var(--yellow);
+    background-color: var(--yellow);
 }
 
 .section p {
-  margin: 15px auto;
-  max-width: 80%;
+    margin: 15px auto;
+    max-width: 80%;
 }
 
 a {
-  text-decoration: none;
-  color: var(--white);
-  display: block;
+    text-decoration: none;
+    color: var(--white);
+    display: block;
 }
 
 a.active {
-  font-weight: 700;
-  color: var(--orange);
+    font-weight: 700;
+    color: var(--orange);
 }
 
 i.fab {
-  color: var(--white);
+    color: var(--white);
 }
 
 .fa-facebook-square:hover {
-  color: var(--facebook);
+    color: var(--facebook);
 }
 
 .fa-instagram-square:hover {
-  color: var(--instagram);
+    color: var(--instagram);
 }
 
 .fa-lightbulb {
-  color: var(--medium-grey);
-  margin-left: 10px;
+    color: var(--medium-grey);
+    margin-left: 10px;
 }
 
+
 /* layout */
+
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .container {
-  margin: 0 auto;
-}
-
-img {
-  margin: 0;
-}
-
-.switch-wrapper {
-  max-width: 90vw;
-  margin: 0 auto;
-  color: var(--medium-grey);
-  justify-content: flex-end;
-  align-items: center;
+    margin: 0 auto;
 }
 
 header {
-  max-width: 90vw;
-  justify-content: space-between;
-  /* min-height -> submenu plaats geven bij hover */
-  min-height: 220px;
-  margin: 30px auto;
+    max-width: 90vw;
+    min-height: 220px;
+    margin: 30px auto;
 }
 
-.header-25 {
-  width: 25%;
-}
-
-.header-50 {
-  width: 50%;
-}
-
-.logo {
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.social {
-  text-align: right;
-  justify-content: flex-end;
-  flex-direction: column;
+.logo-main {
+    text-align: center;
 }
 
 .section-wrapper {
-  text-align: center;
+    text-align: center;
 }
 
 .section {
-  max-width: 70vw;
-  margin: 0 auto;
-  padding: 40px 0;
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
+
+/* Menu */
+
+.collapsible-menu {
+    background-color: var(--black);
+    padding: 10px 10px 10px 0;
+}
+
+.collapsible-menu a {
+    display: block;
+    padding: 0.4em 0 1em 1em;
+}
+
+.collapsible-menu a:hover {
+    color: #c56950;
+    background-color: #333;
+}
+
+.collapsible-menu label {
+    height: 2.5em;
+    display: block;
+    cursor: pointer;
+    background: url(../img/menu.svg) no-repeat left center;
+    padding: 10px 0 10px 50px;
+}
+
+input#menu {
+    display: none;
+    /* Hidden checkbox to toggle between states */
+}
+
+input:checked+label {
+    background-image: url(../img/close.svg);
+    margin: 0;
+}
+
+.menu-content {
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--black);
+    opacity: 0.9;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    transition: max-height 1s ease-in;
+}
+
+
+/* Toggle Effect */
+
+input:checked~.menu-content {
+    max-height: 100%;
+    position: fixed;
+}
+
+
 /* edge-to-edge background color */
+
 .bg-grey {
-  background-color: var(--dark-opacity-01);
+    background-color: var(--dark-opacity-01);
 }
 
 .home-detail {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .intro {
-  padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .img-round {
-  max-width: 180px;
-  border-radius: 50%;
-  margin: 15px;
+    max-width: 180px;
+    border-radius: 50%;
+    margin: 15px;
 }
 
 footer {
-  padding: 30px;
-  background-color: var(--dark-opacity-01);
-  justify-content: center;
+    padding: 30px;
+    background-color: var(--dark-opacity-01);
+    justify-content: center;
 }
 
 .map {
-  margin-right: 30px;
+    margin-right: 30px;
 }
+
 
 /* table */
+
 table {
-  margin: 15px 0 80px;
+    margin: 15px 0 80px;
 }
 
-table, th, td {
-  width: 100%;
-  text-align: left;
-  border-bottom: 1px dotted var(--white);
-  border-collapse: collapse;
+table,
+th,
+td {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px dotted var(--white);
+    border-collapse: collapse;
 }
 
-th, td {
-  padding: 10px;
+th,
+td {
+    padding: 10px;
 }
+
 
 /* Buttons */
-button {
-  /* inline-block om button even groot dan tekst te houden */
-  display: inline-block;
-  margin: 15px 0% 5px;
-  margin-bottom: 10px;
-  padding: 0 10px;
-  height: 25px;
-  border-radius: 3px;
-  outline: 0;
-  background: var(--purple);
-  border: none;
-  color: var(--white);
-  cursor: pointer;
+
+button.btn {
+    /* inline-block om button even groot dan tekst te houden */
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 15px 0% 5px;
+    margin: 30px 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--white);
+    outline: 0;
+    background: var(--purple);
+    color: var(--white);
+    cursor: pointer;
+    box-shadow: 0px 8px 10px -4px var(--black);
+    transition: color 0.1s ease-in;
 }
 
+button.btn:hover {
+    background-color: var(--purple-dark);
+}
+
+.btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+    border: 1px solid var(--purple);
+}
+
+
 /* Navigation */
+
 .navbar {
-  color: #333;
+    color: #333;
 }
 
 .navbar a:hover {
-  color: var(--orange);
+    color: var(--orange);
 }
 
+
 /* when hovering, reveal submenu */
+
 .navbar li:hover .submenu {
-  display: block;
-  max-height: 200px;
-  padding-left: 10px;
+    display: block;
+    max-height: 200px;
+    padding-left: 10px;
 }
 
 .submenu {
-  overflow: hidden;
-  max-height: 0;
-  transition: all 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s ease-out;
 }
 
 .submenu a {}
 
 .submenu a:hover {}
 
+
 /* navbar horizontal */
+
 .navbar-horizontal {
-  justify-content: center;
-  /* color: var(--red)); */
-  font-weight: 700;
-  margin-bottom: 30px;
+    justify-content: center;
+    /* color: var(--red)); */
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .navbar-horizontal a {
-  display: inline-block;
-  color: var(--red));
+    display: inline-block;
+    color: var(--red));
 }
 
 .navbar-horizontal a+a:before {
-  content: " | ";
-  padding: 0 10px;
+    content: " | ";
+    padding: 0 10px;
 }
 
+
 /* bestelformulier */
+
 .form-wrapper {
-  justify-content: space-around;
-  flex-direction: column;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .form-row {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.3em 0 0.1em;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.3em 0 0.1em;
 }
 
 .form-row>label {}
 
 .form-row>input {
-  width: 60px;
-  padding-left: 30px;
+    width: 60px;
+    padding-left: 30px;
 }
 
 .bestel-prijs {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 
 .bestel-subtotaal {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 
-.form-row>button {}
+
+/* Media queries */
+
+
+/* @media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+    .logo {
+        width: 100%;
+        align-items: center;
+        order: 3;
+    }
+    .social {
+        width: 100%;
+        order: 2;
+    }
+} */

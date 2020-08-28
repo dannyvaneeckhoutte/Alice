@@ -16,20 +16,16 @@
 <body>
 
     <div class="container">
-        <div class="switch-wrapper flex">
-            <h5>LET THERE BE LIGHT!</h5>
-            <div class="switch"><i class="fas fa-lightbulb"></i></div>
-        </div>
-        <header class="flex">
-            <nav class="navigation header-25">
-                <ul class="navbar">
+        <!-- <div class="light-switch">Let there be light!</div>  / Ga hem ergens anders plaatsen...-->
+        <div class="collapsible-menu">
+            <!-- Hidden checkbox to toggle between states -->
+            <input type="checkbox" id="menu">
+            <label for="menu"></label>
+            <div class="menu-content">
+                <ul>
                     <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="#">Menu</a>
-                        <ul class="submenu">
-                            <li><a href="eat.html">Eat</a></li>
-                            <li><a href="drink.html">Drink</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="eat.html">Eat</a></li>
+                    <li><a href="drink.html">Drink</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="#do">Do</a></li>
                     <li><a href="#slide">Sfeer</a></li>
@@ -37,14 +33,16 @@
                     <li><a href="#reserveer">Reserveer</a></li>
                     <li><a href="#footer">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="logo header-50 flex">
+            </div>
+        </div>
+        <header>
+            <div class="logo-main">
                 <img src="img/logo.svg" alt="Alice logo">
             </div>
-            <div class="social header-25">
+            <!-- <div class="social header-25">
                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
-            </div>
+            </div> / Komt onderaan bij Contact...-->
         </header>
 
         <div class="section-wrapper">
@@ -109,7 +107,7 @@
                             </p>
                         </div>
                     </div>
-                    <button onclick="location.href='https://www.facebook.com/De-wereld-van-Alice-761543060570041/events/?ref=page_internal'" type="button">
+                    <button class="btn" onclick="location.href='https://www.facebook.com/De-wereld-van-Alice-761543060570041/events/?ref=page_internal'" type="button">
             Bekijk alle events op Facebook</button>
                 </div>
             </div>
