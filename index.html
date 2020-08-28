@@ -17,7 +17,7 @@
 
     <div class="container">
         <!-- <div class="light-switch">Let there be light!</div>  / Ga hem ergens anders plaatsen...-->
-        <div class="collapsible-menu">
+        <nav class="hamburger-menu">
             <!-- Hidden checkbox to toggle between states -->
             <input type="checkbox" id="menu">
             <label for="menu"></label>
@@ -38,7 +38,7 @@
                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
             </div> -->
-        </div>
+        </nav>
         <header>
             <div class="logo-main"><img src="img/logo.svg" alt="Alice logo"></div>
 
@@ -47,12 +47,12 @@
         <div class="section-wrapper">
             <div class="section section-home" id="home">
                 <div class="intro home-intro">
-                    <h3>Alice heeft vele kamers…</h3>
-                    <p>Ontbijten, lunchen en koffie drinken doe je in de living. In onze winkel verkopen we tweedehandskinderkleding van de leukste merken. De bovenverdieping is een creatieve broeiplaats.
+                    <h2>Alice heeft vele kamers…</h2>
+                    <p>Ontbijten, lunchen en koffie drinken doe je in de living. In onze winkel verkopen we tweedehands kinderkleding van de leukste merken. De bovenverdieping is een creatieve broeiplaats...
                     </p>
                 </div>
-                <!-- remove flex on mobile -->
-                <div class="home-detail flex">
+                <!-- add flex on larger screens -->
+                <div class="home-detail">
                     <div class="card home-eat">
                         <img src="img/hamburger.svg" alt="Hamburger icon">
                         <h3>EAT</h3>
@@ -82,8 +82,8 @@
                         <h3>DO</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aliquam, sint molestias maxime possimus id quidem necessitatibus. Eum, tempore nihil. Voluptas voluptatem fuga ea excepturi dolorem explicabo recusandae placeat quasi!</p>
                     </div>
-                    <!-- remove flex on mobile -->
-                    <div class="do-detail flex">
+                    <!-- add flex on larger screens -->
+                    <div class="do-detail">
                         <div class="card do-cafe">
                             <img src="img/cafe.jpg" alt="cafe" class="img-round">
                             <h3>Café Alice</h3>
@@ -114,37 +114,42 @@
             <div class="bg-grey">
                 <div class="section section-bestel" id="bestel">
                     <form>
-                        <ul class="form-wrapper flex">
-                            <li class="form-row flex">
+                        <ul class="form-wrapper">
+                            <li class="form-row">
                                 <label for="gerecht1">Spaghettisaus (1kg)</label>
-                                <div class="bestel-prijs">€10.00</div>
-                                <input type="number" id="gerecht1" min="0" max="10">
-                                <div class="bestel-subtotaal">€00.00</div>
+                                <input name="gerecht1" type="number" id="gerecht1" min="0" max="10">
+                                <span class="bestel-prijs">x €10.00 = </span>
+                                <span class="bestel-subtotaal">€00.00</span>
                             </li>
-                            <li class="form-row flex">
-                                <label for="gerecht1">Chili con carne</label>
-                                <div class="bestel-prijs">€10.00</div>
-                                <input type="number" id="gerecht2" min="0" max="10">
-                                <div class="bestel-subtotaal">€00.00</div>
-
+                            <li class="form-row">
+                                <label for="gerecht1">Spaghettisaus (1kg)</label>
+                                <input name="gerecht1" type="number" id="gerecht1" min="0" max="10">
+                                <span class="bestel-prijs">x €10.00 = </span>
+                                <span class="bestel-subtotaal">€00.00</span>
                             </li>
-                            <li class="form-row flex">
-                                <label for="gerecht1">Groenten met bouillon</label>
-                                <div class="bestel-prijs">€10.00</div>
-                                <input type="number" id="gerecht3" min="0" max="10">
-                                <div class="bestel-subtotaal">€00.00</div>
+                            <li class="form-row">
+                                <label for="gerecht1">Spaghettisaus (1kg)</label>
+                                <input name="gerecht1" type="number" id="gerecht1" min="0" max="10">
+                                <span class="bestel-prijs">x €10.00 = </span>
+                                <span class="bestel-subtotaal">€00.00</span>
                             </li>
-                            <li class="form-row flex">
-                                <label for="gerecht1">Quiche broccoli en spek</label>
-                                <div class="bestel-prijs">€10.00</div>
-                                <input type="number" id="gerecht3" min="0" max="10">
-                                <div class="bestel-subtotaal">€00.00</div>
+                            <li class="form-row">
+                                <label for="gerecht1">Spaghettisaus (1kg)</label>
+                                <input name="gerecht1" type="number" id="gerecht1" min="0" max="10">
+                                <span class="bestel-prijs">x €10.00 = </span>
+                                <span class="bestel-subtotaal">€00.00</span>
                             </li>
-                            <li class="form-row flex">
-                                <label for="gerecht1">Cheesecake</label>
-                                <div class="bestel-prijs">€10.00</div>
-                                <input type="number" id="gerecht" min="0" max="10">
-                                <div class="bestel-subtotaal">€00.00</div>
+                            <li class="form-row">
+                                <label for="gerecht1">Spaghettisaus (1kg)</label>
+                                <input name="gerecht1" type="number" id="gerecht1" min="0" max="10">
+                                <span class="bestel-prijs">x €10.00 = </span>
+                                <span class="bestel-subtotaal">€00.00</span>
+                            </li>
+                            <li class="form-row">
+                                <label for="gerecht1">Spaghettisaus (1kg)</label>
+                                <input name="gerecht1" type="number" id="gerecht1" min="0" max="10">
+                                <span class="bestel-prijs">x €10.00 = </span>
+                                <span class="bestel-subtotaal">€00.00</span>
                             </li>
                         </ul>
                     </form>
@@ -153,28 +158,24 @@
             <div class="section section-reserveer" id="reserveer">reserveer</div>
         </div>
 
-        <footer class="footer flex" id="footer">
+        <footer class="footer" id="footer">
 
-            <div class="map">
-                <iframe title="google map" width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=20&center=50.9589%2C4.2326&key=AIzaSyB5irXEvoO4G6WLKzzESP3DOSQ9mxODRT0" allowfullscreen></iframe>
+            <div class="map-container">
+                <iframe title="google map" width="100%" height="350px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=20&center=50.9589%2C4.2326&key=AIzaSyB5irXEvoO4G6WLKzzESP3DOSQ9mxODRT0" allowfullscreen></iframe>
             </div>
 
             <div class="info">
                 <p>
                     <strong>De Wereld van Alice</strong>
                     <br>Kerstraat 1, 1785 Merchtem
-                    <br><a href="mailto:info@alice.be">info@alice.be</a> 0477 777 777
-                    <br>© 2020 De Wereld van Alice
+                    <br><a href="mailto:info@dewereldvanalice.be">info@dewereldvanalice.be</a> 0478 55 48 04
                 </p>
                 <br>
                 <p>
                     <strong>Openingsuren</strong>
-                    <br>maandag: gesloten
-                    <br>dinsdag: gesloten
-                    <br>woensdag: van 9 tot 17u
+                    <br>maandag & dinsdag: gesloten
+                    <br>woensdag, vrijdag, zaterdag: van 9 tot 17u
                     <br>donderdag: van 17 tot 23u
-                    <br>vrijdag: van 9 tot 17u
-                    <br>zaterdag: van 9 tot 17u
                     <br>zondag: van 14 tot 17u
                 </p>
             </div>

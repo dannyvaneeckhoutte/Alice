@@ -103,31 +103,61 @@ header {
 }
 
 .section {
-    max-width: 70vw;
+    max-width: 90vw;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 30px 0;
+}
+
+
+/* Cards */
+
+.card {
+    padding: 2em;
+}
+
+.home-intro h2 {
+    color: var(--orange);
+}
+
+.home-eat h3 {
+    color: var(--red);
+}
+
+.home-drink h3 {
+    color: var(--yellow);
+}
+
+.home-shop h3 {
+    color: var(--blue);
+}
+
+.do-intro h3,
+.do-cafe h3,
+.do-wunder h3,
+.do-kermis h3 {
+    color: var(--purple);
 }
 
 
 /* Menu */
 
-.collapsible-menu {
+.hamburger-menu {
     background-color: var(--black);
     padding: 10px 10px 10px 0;
 }
 
-.collapsible-menu a {
+.hamburger-menu a {
     display: block;
     padding: 0.4em 0 1em 1em;
 }
 
-.collapsible-menu a:hover {
+.hamburger-menu a:hover {
     color: #c56950;
     background-color: #333;
 }
 
-.collapsible-menu label {
-    height: 2.5em;
+.hamburger-menu label {
+    height: 2.2em;
     display: block;
     cursor: pointer;
     background: url(../img/menu.svg) no-repeat left center;
@@ -169,9 +199,10 @@ input:checked~.menu-content {
     background-color: var(--dark-opacity-01);
 }
 
-.home-detail {
+
+/* .home-detail {
     justify-content: space-between;
-}
+} */
 
 .intro {
     padding-bottom: 30px;
@@ -184,13 +215,13 @@ input:checked~.menu-content {
 }
 
 footer {
-    padding: 30px;
     background-color: var(--dark-opacity-01);
     justify-content: center;
 }
 
-.map {
-    margin-right: 30px;
+.info {
+    padding: 2em;
+    text-align: center;
 }
 
 
@@ -247,17 +278,6 @@ button.btn:hover {
 }
 
 
-/* Navigation */
-
-.navbar {
-    color: #333;
-}
-
-.navbar a:hover {
-    color: var(--orange);
-}
-
-
 /* when hovering, reveal submenu */
 
 .navbar li:hover .submenu {
@@ -275,22 +295,18 @@ button.btn:hover {
 
 /* bestelformulier */
 
-.form-wrapper {
-    justify-content: space-around;
-    flex-direction: column;
-}
-
 .form-row {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.3em 0 0.1em;
+    padding: 0.5em;
 }
 
+.form-row label {
+    text-align: right;
+    padding-right: 1em;
+}
 
-/* .form-row>label {} */
-
-.form-row>input {
-    width: 60px;
+.form-row input {
+    width: 4em;
+    height: 2em;
     padding-left: 30px;
 }
 
@@ -305,18 +321,9 @@ button.btn:hover {
 
 /* Media queries */
 
-
-/* @media screen and (max-width: 768px) {
-    .flex {
-        flex-direction: column;
+@media screen and (min-size: 768px) {
+    .home-detail {
+        display: flex;
+        background-color: red;
     }
-    .logo {
-        width: 100%;
-        align-items: center;
-        order: 3;
-    }
-    .social {
-        width: 100%;
-        order: 2;
-    }
-} */
+}
