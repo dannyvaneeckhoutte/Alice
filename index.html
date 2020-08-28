@@ -16,32 +16,35 @@
 <body>
 
     <div class="container">
-        <!-- <div class="light-switch">Let there be light!</div>  / Ga hem ergens anders plaatsen...-->
-        <nav class="hamburger-menu">
-            <!-- Hidden checkbox to toggle between states -->
-            <input type="checkbox" id="menu">
-            <label for="menu"></label>
-            <div class="menu-content">
-                <ul>
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="eat.html">Eat</a></li>
-                    <li><a href="drink.html">Drink</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="#do">Do</a></li>
-                    <li><a href="#slide">Sfeer</a></li>
-                    <li><a href="#bestel">Takeaway</a></li>
-                    <li><a href="#reserveer">Reserveer</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                </ul>
-            </div>
-            <!-- <div class="social header-25">
+        <div class="nav-container">
+            <nav class="hamburger-menu">
+                <!-- Hidden checkbox to toggle between states -->
+                <input type="checkbox" id="menu">
+                <label for="menu"></label>
+                <div class="menu-content">
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="eat.html">Eat</a></li>
+                        <li><a href="drink.html">Drink</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#do">Do</a></li>
+                        <li><a href="#slide">Sfeer</a></li>
+                        <li><a href="#bestel">Takeaway</a></li>
+                        <li><a href="#reserveer">Reserveer</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="social header-25">
                 <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-2x"></i></a>
             </div> -->
-        </nav>
+            </nav>
+            <div class="light-switch">
+                <a href="#"><img src="./img/lightbulb.svg" alt="Light-mode switch"></a>
+            </div>
+        </div>
         <header>
             <div class="logo-main"><img src="img/logo.svg" alt="Alice logo"></div>
-
         </header>
 
         <div class="section-wrapper">
@@ -165,19 +168,24 @@
             </div>
 
             <div class="info">
-                <p>
-                    <strong>De Wereld van Alice</strong>
-                    <br>Kerstraat 1, 1785 Merchtem
-                    <br><a href="mailto:info@dewereldvanalice.be">info@dewereldvanalice.be</a> 0478 55 48 04
-                </p>
+                <div class="adres">
+                    <p>
+                        <strong>De Wereld van Alice</strong>
+                        <br>Kerstraat 1
+                        <br>1785 Merchtem
+                        <br><a href="mailto:info@dewereldvanalice.be">info@dewereldvanalice.be</a> 0478 55 48 04
+                    </p>
+                </div>
                 <br>
-                <p>
-                    <strong>Openingsuren</strong>
-                    <br>maandag & dinsdag: gesloten
-                    <br>woensdag, vrijdag, zaterdag: van 9 tot 17u
-                    <br>donderdag: van 17 tot 23u
-                    <br>zondag: van 14 tot 17u
-                </p>
+                <div class="openingsuren">
+                    <p>
+                        <strong>Openingsuren</strong>
+                        <br>maandag & dinsdag: gesloten
+                        <br>woensdag, vrijdag, zaterdag: van 9 tot 17u
+                        <br>donderdag: van 17 tot 23u
+                        <br>zondag: van 14 tot 17u
+                    </p>
+                </div>
             </div>
 
         </footer>

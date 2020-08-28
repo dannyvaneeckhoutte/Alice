@@ -141,9 +141,15 @@ header {
 
 /* Menu */
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 10px 0;
+    margin: 0.5em 0 0 1em;
+}
+
 .hamburger-menu {
     background-color: var(--black);
-    padding: 10px 10px 10px 0;
 }
 
 .hamburger-menu a {
@@ -162,7 +168,6 @@ header {
     cursor: pointer;
     background: url(../img/menu.svg) no-repeat left center;
     padding: 15px 0 10px 50px;
-    margin: 0.5em 0 0 1em;
 }
 
 input#menu {
@@ -190,6 +195,13 @@ input:checked+label {
 input:checked~.menu-content {
     max-height: 100%;
     position: fixed;
+}
+
+
+/* Light-mode switch */
+
+.light-switch img {
+    height: 2em;
 }
 
 
@@ -321,9 +333,20 @@ button.btn:hover {
 
 /* Media queries */
 
-@media screen and (min-size: 768px) {
-    .home-detail {
+@media screen and (min-width: 768px) {
+    .home-detail,
+    .do-detail {
         display: flex;
-        background-color: red;
+        align-content: space-between;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+    }
+    .info .adres {
+        text-align: left;
+    }
+    .info .openingsuren {
+        text-align: right;
     }
 }
