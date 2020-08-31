@@ -103,9 +103,13 @@ header {
 }
 
 .section {
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 30px 0;
+    /* max-width: 90vw; */
+    margin: 30 auto;
+    padding: 0 0 30px 0;
+}
+
+.section-sfeer {
+    width: 100vw;
 }
 
 
@@ -194,7 +198,7 @@ input:checked+label {
 
 .carousel {
     position: relative;
-    height: 400px;
+    height: 600px;
     width: 100%;
     margin: 0 auto;
 }
@@ -240,7 +244,7 @@ input:checked+label {
     /* moves button half of its height up on Y-axis */
     background: whitesmoke;
     border: 0;
-    border-radius: 3px;
+    border-radius: 50%;
     cursor: pointer;
     opacity: 30%;
     box-shadow: 0px 0px 12px;
