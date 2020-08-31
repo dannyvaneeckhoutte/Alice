@@ -28,7 +28,7 @@
                         <li><a href="drink.html">Drink</a></li>
                         <li><a href="shop.html">Shop</a></li>
                         <li><a href="#do">Do</a></li>
-                        <li><a href="#slide">Sfeer</a></li>
+                        <li><a href="#sfeer">Sfeer</a></li>
                         <li><a href="#bestel">Takeaway</a></li>
                         <li><a href="#reserveer">Reserveer</a></li>
                         <li><a href="#footer">Contact</a></li>
@@ -113,7 +113,33 @@
             Bekijk alle events op Facebook</button>
                 </div>
             </div>
-            <div class="section section-sfeer" id="slide">sfeer</div>
+            <div class="section carousel" id="sfeer">
+                <div class="carousel__track--container">
+                    <ul class="carousel__track">
+                        <li class="carousel__slide current-slide">
+                            <img class="carousel__image" src="img/slide-1.jpg" alt="">
+                        </li>
+                        <li class="carousel__slide">
+                            <img class="carousel__image" src="img/slide-2.jpg" alt="">
+                        </li>
+                        <li class="carousel__slide">
+                            <img class="carousel__image" src="img/slide-3.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel__button carousel__button--left is-hidden">
+								<img src="img/left.svg" alt="">
+							</button>
+                <button class="carousel__button carousel__button--right">
+							<img src="img/right.svg" alt="">
+						</button>
+
+                <div class="carousel__nav">
+                    <button class="carousel__indicator current-slide"></button>
+                    <button class="carousel__indicator"></button>
+                    <button class="carousel__indicator"></button>
+                </div>
+            </div>
             <div class="bg-grey">
                 <div class="section section-bestel" id="bestel">
                     <form>
@@ -193,9 +219,7 @@
 
     </div>
 
-    <!-- Vue.js -->
-    <script src="https://unpkg.com/vue"></script>
-
+    <script src="js/carousel.js"></script>
 </body>
 
 </html>

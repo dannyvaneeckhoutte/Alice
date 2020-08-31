@@ -190,6 +190,111 @@ input:checked+label {
 }
 
 
+/* image carousel slider */
+
+.carousel {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel__image {
+    /* Fits/crops image into container: */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__track--container {
+    /* background: maroon; */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+    /* height to stop track & its children from shrinking to 0 */
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    /* for a smooth slide */
+}
+
+.carousel__slide {
+    /* stacks images on top of eachother: */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    /* moves top of button to halfway image */
+    transform: translateY(-50%);
+    /* moves button half of its height up on Y-axis */
+    background: whitesmoke;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 30%;
+    box-shadow: 0px 0px 12px;
+}
+
+.carousel__button:hover {
+    opacity: 60%;
+}
+
+.carousel__button:active {
+    opacity: 40%;
+    box-shadow: 0px 0px 3px;
+}
+
+.carousel__button--left {
+    left: 15px;
+}
+
+.carousel__button--right {
+    right: 15px;
+}
+
+.carousel__button img {
+    width: 20px;
+    height: 40px;
+}
+
+.carousel__nav {
+    /* background: hotpink; */
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    /* width and height for a round circle, 1/1 ratio = oval if div container is not square */
+    width: 10px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.is-hidden {
+    display: none;
+}
+
+
 /* Toggle Effect */
 
 input:checked~.menu-content {
