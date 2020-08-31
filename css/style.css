@@ -1,7 +1,7 @@
 /* colors */
 
 :root {
-    --black: #1d1c1d;
+    --black: #2c2c2c;
     --dark-grey: #716f72;
     --medium-grey: #cccccc;
     --white: #fafafa;
@@ -123,16 +123,9 @@ header {
     color: var(--orange);
 }
 
-.home-eat h3 {
-    color: var(--red);
-}
-
-.home-drink h3 {
-    color: var(--yellow);
-}
-
-.home-shop h3 {
-    color: var(--blue);
+.intro-icons {
+    max-height: 30px;
+    margin: 20px 0 10px
 }
 
 .do-intro h3,
@@ -192,6 +185,20 @@ input:checked+label {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     /* transition: max-height 1s ease-in-out; */
 }
+
+
+/* Toggle Effect */
+
+input:checked~.menu-content {
+    max-height: 100%;
+    width: 100vw;
+    /* position: relative; */
+}
+
+
+/* .menu-open {
+    max-height: 100%;
+} */
 
 
 /* image carousel slider */
@@ -299,31 +306,11 @@ input:checked+label {
 }
 
 
-/* Toggle Effect */
-
-input:checked~.menu-content {
-    max-height: 100%;
-    position: fixed;
-}
-
-
 /* Light-mode switch */
 
 .light-switch img {
     height: 2em;
 }
-
-
-/* edge-to-edge background color */
-
-.bg-grey {
-    background-color: var(--dark-opacity-01);
-}
-
-
-/* .home-detail {
-    justify-content: space-between;
-} */
 
 .intro {
     padding-bottom: 30px;
