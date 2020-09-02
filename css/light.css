@@ -21,8 +21,8 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 h3.page-title-eat {
@@ -85,6 +85,7 @@ i.fab {
 }
 
 .container {
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -125,7 +126,7 @@ header {
 
 .intro-icons {
     max-height: 30px;
-    margin: 20px 0 10px
+    margin: 40px 0 20px
 }
 
 .do-intro h3,
@@ -145,7 +146,8 @@ header {
     margin: 0.5em 0 0 1em;
 }
 
-.hamburger-menu {
+
+/* .hamburger-menu {
     background-color: var(--black);
 }
 
@@ -169,7 +171,7 @@ header {
 
 input#menu {
     display: none;
-    /* Hidden checkbox to toggle between states */
+    /* Hidden checkbox to toggle between states
 }
 
 input:checked+label {
@@ -183,20 +185,21 @@ input:checked+label {
     background-color: var(--black);
     opacity: 0.9;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
-    /* transition: max-height 1s ease-in-out; */
-}
+    /* transition: max-height 1s ease-in-out;
+}*/
 
 
 /* Toggle Effect */
 
-input:checked~.menu-content {
+
+/* input:checked~.menu-content {
     max-height: 100%;
     width: 100vw;
-    /* position: relative; */
+    /* position: relative;
 }
 
 
-/* .menu-open {
+.menu-open {
     max-height: 100%;
 } */
 
@@ -207,7 +210,7 @@ input:checked~.menu-content {
     position: relative;
     height: 600px;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 
 .carousel__image {
@@ -249,12 +252,16 @@ input:checked~.menu-content {
     /* moves top of button to halfway image */
     transform: translateY(-50%);
     /* moves button half of its height up on Y-axis */
-    background: whitesmoke;
     border: 0;
-    border-radius: 50%;
     cursor: pointer;
-    opacity: 30%;
-    box-shadow: 0px 0px 12px;
+    background: none;
+    opacity: 0.8;
+    text-shadow: 3px 3px 6px var(--black);
+}
+
+.fa-chevron-circle-left,
+.fa-chevron-circle-right {
+    color: var(--white);
 }
 
 .carousel__button:hover {
@@ -262,8 +269,9 @@ input:checked~.menu-content {
 }
 
 .carousel__button:active {
-    opacity: 40%;
-    box-shadow: 0px 0px 3px;
+    color: var(--orange);
+    opacity: 60%;
+    text-shadow: none;
 }
 
 .carousel__button--left {
@@ -272,11 +280,6 @@ input:checked~.menu-content {
 
 .carousel__button--right {
     right: 15px;
-}
-
-.carousel__button img {
-    width: 20px;
-    height: 40px;
 }
 
 .carousel__nav {
@@ -288,10 +291,9 @@ input:checked~.menu-content {
 
 .carousel__indicator {
     border: 0;
-    border-radius: 50%;
-    /* width and height for a round circle, 1/1 ratio = oval if div container is not square */
-    width: 10px;
-    height: 15px;
+    border-radius: 2px;
+    width: 30px;
+    height: 6px;
     background: rgba(255, 255, 255, 0.3);
     margin: 0 6px;
     cursor: pointer;
@@ -320,6 +322,11 @@ input:checked~.menu-content {
     max-width: 180px;
     border-radius: 50%;
     margin: 15px;
+    transition: all 0.1s ease-in-out;
+}
+
+.img-round:hover {
+    border: 3px solid var(--purple);
 }
 
 footer {
