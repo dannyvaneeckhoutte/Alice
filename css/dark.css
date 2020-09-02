@@ -21,7 +21,6 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 1.2em;
     background-color: var(--black);
     color: var(--white);
 }
@@ -109,13 +108,23 @@ header {
 }
 
 .section {
-    /* max-width: 90vw; */
-    margin: 30 auto;
+    margin: 3em auto;
     padding: 0 0 30px 0;
 }
 
 .section-sfeer {
     width: 100vw;
+}
+
+.section-drink,
+.section-eat,
+.section-takeaway {
+    margin: 3em auto;
+    max-width: 800px;
+}
+
+.bestel-tel {
+    user-select: none;
 }
 
 
@@ -126,6 +135,11 @@ header {
 }
 
 .home-intro h2 {
+    color: var(--orange);
+}
+
+.section-reserveer h2,
+.section-takeaway h2 {
     color: var(--orange);
 }
 
@@ -170,7 +184,7 @@ header {
 
 .main-menu li:hover .sub-menu {
     display: block;
-    max-height: 200px;
+    max-height: 300px;
 }
 
 
@@ -341,7 +355,7 @@ footer {
 /* table */
 
 table {
-    margin: 15px 0 80px;
+    margin: 3em auto;
 }
 
 table,
