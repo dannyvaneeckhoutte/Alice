@@ -1,202 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="Description"
+			content="De Wereld van Alice: coffeeshop, restaurant en bar in het centrum van Merchtem"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/7b2dc1503a.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/light.css" id="theme" />
+		<title>De Wereld van Alice - home</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="De Wereld van Alice: coffeeshop, restaurant en bar in het centrum van Merchtem">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7b2dc1503a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/dark.css" title="dark-mode">
-    <title>De Wereld van Alice - home</title>
-</head>
+	<body id="home">
+		<div class="container">
+			<div class="nav-container">
+				<nav class="navigation">
+					<ul class="main-menu">
+						<li>
+							<a href="#"><i class="fas fa-bars fa-2x"></i></a>
+							<ul class="sub-menu">
+								<li><a href="#home">Home</a></li>
+								<li><a href="#sfeer">Sfeer</a></li>
+								<li><a href="#do">Do</a></li>
+								<li><a href="#takeaway">Takeaway</a></li>
+								<li><a href="eat.html">Eat</a></li>
+								<li><a href="drink.html">Drink</a></li>
+								<li><a href="#shop">Shop</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="light-switch">
+					<a href="#" onclick="switchSheet()">
+						<i class="fas fa-lightbulb fa-2x"></i>
+					</a>
+				</div>
+			</div>
+			<header>
+				<div class="logo-main">
+					<img src="img/logo-txt.svg" alt="Alice logo" />
+				</div>
+			</header>
 
-<body>
+			<div class="section-wrapper">
+				<div class="section section-home">
+					<div class="intro home-intro">
+						<p>
+							Ontbijten, lunchen en koffie drinken doe je in de living. In onze
+							winkel verkopen we tweedehands kinderkleding van de leukste
+							merken. De bovenverdieping is een creatieve broeiplaats...
+						</p>
+						<img class="intro-icons" src="img/icons.svg" alt="" />
+					</div>
+				</div>
+				<div class="section section-sfeer carousel" id="sfeer">
+					<div class="carousel__track--container">
+						<ul class="carousel__track">
+							<li class="carousel__slide current-slide">
+								<img class="carousel__image" src="img/slide-1.jpg" alt="" />
+							</li>
+							<li class="carousel__slide">
+								<img class="carousel__image" src="img/slide-2.jpg" alt="" />
+							</li>
+							<li class="carousel__slide">
+								<img class="carousel__image" src="img/slide-3.jpg" alt="" />
+							</li>
+						</ul>
+					</div>
+					<button class="carousel__button carousel__button--left is-hidden">
+						<i class="fas fa-chevron-circle-left fa-3x"></i>
+					</button>
+					<button class="carousel__button carousel__button--right">
+						<i class="fas fa-chevron-circle-right fa-3x"></i>
+					</button>
 
-    <div class="container">
-        <div class="nav-container">
-            <nav class="navigation">
-                <ul class="main-menu">
-                    <li><a href="#"><i class="fas fa-bars fa-lg"></i></a>
-                        <ul class="sub-menu">
-                            <li><a class="active" href="#home">Home</a></li>
-                            <li><a href="#sfeer">Sfeer</a></li>
-                            <li><a href="#do">Do</a></li>
-                            <li><a href="#takeaway">Takeaway</a></li>
-                            <li><a href="eat.html">Eat</a></li>
-                            <li><a href="drink.html">Drink</a></li>
-                            <li><a href="#shop">Shop</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="light-switch">
-                <a href="#">Let There Be Light!<i class="fas fa-lightbulb fa-lg"></i></a>
-            </div>
-        </div>
-        <header>
-            <div class="logo-main"><img src="img/logo-txt.svg" alt="Alice logo"></div>
-        </header>
-
-        <div class="section-wrapper">
-            <div class="section section-home" id="home">
-                <div class="intro home-intro">
-                    <p>Ontbijten, lunchen en koffie drinken doe je in de living. In onze winkel verkopen we tweedehands kinderkleding van de leukste merken. De bovenverdieping is een creatieve broeiplaats...
-                    </p>
-                    <img class="intro-icons" src="img/icons.svg" alt="">
-
-                </div>
-            </div>
-            <div class="section section-sfeer carousel" id="sfeer">
-                <div class="carousel__track--container">
-                    <ul class="carousel__track">
-                        <li class="carousel__slide current-slide">
-                            <img class="carousel__image" src="img/slide-1.jpg" alt="">
-                        </li>
-                        <li class="carousel__slide">
-                            <img class="carousel__image" src="img/slide-2.jpg" alt="">
-                        </li>
-                        <li class="carousel__slide">
-                            <img class="carousel__image" src="img/slide-3.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
-                <button class="carousel__button carousel__button--left is-hidden">
-                    <i class="fas fa-chevron-circle-left fa-3x"></i>
-                        </button>
-                <button class="carousel__button carousel__button--right">
-                    <i class="fas fa-chevron-circle-right fa-3x"></i>
-                    </button>
-
-                <div class="carousel__nav">
-                    <button class="carousel__indicator current-slide"></button>
-                    <button class="carousel__indicator"></button>
-                    <button class="carousel__indicator"></button>
-                </div>
-            </div>
-            <div class="section section-do" id="do">
-                <div class="intro do-intro">
-                    <!-- <h3>DO</h3>
+					<div class="carousel__nav">
+						<button class="carousel__indicator current-slide"></button>
+						<button class="carousel__indicator"></button>
+						<button class="carousel__indicator"></button>
+					</div>
+				</div>
+				<div class="section section-do" id="do">
+					<div class="intro do-intro">
+						<!-- <h3>DO</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aliquam, sint molestias maxime possimus id quidem necessitatibus. Eum, tempore nihil. Voluptas voluptatem fuga ea excepturi dolorem explicabo recusandae placeat quasi!</p>
                 </div> -->
-                    <!-- add flex on larger screens -->
-                    <div class="do-detail">
-                        <div class="card do-cafe">
-                            <img src="img/cafe.jpg" alt="cafe" class="img-round">
-                            <h3>Café Alice</h3>
-                            <p>In café Alice kan je terecht voor lekkere drankjes, goeie biertjes, heerlijke cocktails en véél sfeer. Want donderdagavond is ook al een beetje weekend! Have a drink with us!
-                            </p>
-                        </div>
-                        <div class="card do-wunder">
-                            <img src="img/wunder.jpg" alt="wunderground" class="img-round">
-                            <h3>Wünderground</h3>
-                            <p>Eén vrijdag per maand verandert Alice vanaf 18u in WÜNDERGROUND: Drie zeer jonge deernes are taking over the show (Evi & Sigrid zijn gewoon "jong")
-                                <br>
-                                <br> Op de menumuur: cocktails, mocktails & iets maagvullends waar je gegarandeerd je vingers bij aflikt! Ergens tussen de achter- en voorgrond spelen dj's of een band muziek uit wünderground.
-                            </p>
-                        </div>
-                        <div class="card do-kermis">
-                            <img src="img/kermis.jpg" alt="Kermis" class="img-round">
-                            <h3>Kermis @ Alice</h3>
-                            <p>Het is weer zo ver! 10 dagen feest!
-                                <br>
-                                <br>Tijdens de kermis serveren wij jullie elke dag spaghetti, kaas- en garnaalkroketten, kibbeling en fingerfood tot 22h. Onze beroemde cocktailbar is elke dag open!
-                            </p>
-                        </div>
-                    </div>
-                    <button class="btn" onclick="location.href='https://www.facebook.com/De-wereld-van-Alice-761543060570041/events/?ref=page_internal'" type="button">
-    Bekijk alle events op Facebook</button>
-                </div>
+						<!-- add flex on larger screens -->
+						<div class="do-detail">
+							<div class="card do-cafe">
+								<img src="img/cafe.jpg" alt="cafe" class="img-round" />
+								<h3>Café Alice</h3>
+								<p>
+									In café Alice kan je terecht voor lekkere drankjes, goeie
+									biertjes, heerlijke cocktails en véél sfeer. Want
+									donderdagavond is ook al een beetje weekend! Have a drink with
+									us!
+								</p>
+							</div>
+							<div class="card do-wunder">
+								<img
+									src="img/wunder.jpg"
+									alt="wunderground"
+									class="img-round"
+								/>
+								<h3>Wünderground</h3>
+								<p>
+									Eén vrijdag per maand verandert Alice vanaf 18u in
+									WÜNDERGROUND: Drie zeer jonge deernes are taking over the show
+									(Evi & Sigrid zijn gewoon "jong")
+									<br />
+									<br />
+									Op de menumuur: cocktails, mocktails & iets maagvullends waar
+									je gegarandeerd je vingers bij aflikt! Ergens tussen de
+									achter- en voorgrond spelen dj's of een band muziek uit
+									wünderground.
+								</p>
+							</div>
+							<div class="card do-kermis">
+								<img src="img/kermis.jpg" alt="Kermis" class="img-round" />
+								<h3>Kermis @ Alice</h3>
+								<p>
+									Het is weer zo ver! 10 dagen feest!
+									<br />
+									<br />Tijdens de kermis serveren wij jullie elke dag
+									spaghetti, kaas- en garnaalkroketten, kibbeling en fingerfood
+									tot 22h. Onze beroemde cocktailbar is elke dag open!
+								</p>
+							</div>
+						</div>
+						<button
+							class="btn"
+							onclick="location.href='https://www.facebook.com/De-wereld-van-Alice-761543060570041/events/?ref=page_internal'"
+							type="button"
+						>
+							Bekijk alle events op Facebook
+						</button>
+					</div>
+				</div>
+				<div class="section section-takeaway" id="takeaway">
+					<h2>Takeaway</h2>
+					<img src="img/afhaal.jpg" alt="cafe" class="img-round" />
+					<p>
+						Hieronder vind je het takeaway menu voor deze week terug. <br />
+						Telefonisch bestellen kan op woensdag & zaterdag, voor 14u op het
+						nummer:
+					</p>
+					<a href="tel:++32478554804"><strong>0478 55 48 04</strong></a>
+					<table class="takeaway-lunch">
+						<tr>
+							<td>Spaghettisaus/vegi - per kg</td>
+							<td>€11.00</td>
+						</tr>
+						<tr>
+							<td>Chili con/sin carne - per kg</td>
+							<td>€12.00</td>
+						</tr>
+						<tr>
+							<td>
+								Groenten met bouillon - per kg
+								<em>(tip: serveer met couscous en vlees naar keuze)</em>
+							</td>
+							<td>€10.00</td>
+						</tr>
+						<tr>
+							<td>Quiche broccoli en spek</td>
+							<td>€20.00</td>
+						</tr>
+						<tr>
+							<td>Quiche broccoli en spek (halve portie)</td>
+							<td>€10.00</td>
+						</tr>
+						<tr>
+							<td>Groentenquiche</td>
+							<td>€20.00</td>
+						</tr>
+						<tr>
+							<td>Groentenquiche (halve portie)</td>
+							<td>€10.00</td>
+						</tr>
+					</table>
+				</div>
+				<div class="section section-reserveer" id="reserveer">
+					<h2>Reserveren</h2>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+						alias ea labore? Nesciunt, delectus veritatis! Suscipit enim animi
+						minus ad odio odit, ratione quidem voluptates repudiandae excepturi
+						sequi pariatur esse.
+					</p>
+					<p>Een tafel reserveren kan op het nummer:</p>
+					<a href="tel:++32478554804"><strong>0478 55 48 04</strong></a>
+				</div>
 
+				<footer class="footer" id="contact">
+					<div class="map-container">
+						<iframe
+							title="google map"
+							width="100%"
+							height="350px"
+							frameborder="0"
+							style="border: 0"
+							src="https://www.google.com/maps/embed/v1/view?zoom=20&center=50.9589%2C4.2326&key=AIzaSyB5irXEvoO4G6WLKzzESP3DOSQ9mxODRT0"
+							allowfullscreen
+						></iframe>
+					</div>
 
-
-            </div>
-            <div class="section section-takeaway" id="takeaway">
-                <h2>Takeaway</h2>
-                <img src="img/afhaal.jpg" alt="cafe" class="img-round">
-                <p>Hieronder vind je het takeaway menu voor deze week terug.
-                    <br> Telefonisch bestellen kan op woensdag & zaterdag, voor 14u op het nummer:</p>
-                <a href="tel:++32478554804"><strong>0478 55 48 04</strong></a>
-                <table class="takeaway-lunch">
-                    <tr>
-                        <td>Spaghettisaus/vegi - per kg</td>
-                        <td>€11.00</td>
-                    </tr>
-                    <tr>
-                        <td>Chili con/sin carne - per kg</td>
-                        <td>€12.00</td>
-                    </tr>
-                    <tr>
-                        <td>Groenten met bouillon - per kg <em>(tip: serveer met couscous en vlees naar keuze)</em></td>
-                        <td>€10.00</td>
-                    </tr>
-                    <tr>
-                        <td>Quiche broccoli en spek</td>
-                        <td>€20.00</td>
-                    </tr>
-                    <tr>
-                        <td>Quiche broccoli en spek (halve portie)</td>
-                        <td>€10.00</td>
-                    </tr>
-                    <tr>
-                        <td>Groentenquiche</td>
-                        <td>€20.00</td>
-                    </tr>
-                    <tr>
-                        <td>Groentenquiche (halve portie)</td>
-                        <td>€10.00</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="section section-reserveer" id="reserveer">
-                <h2>Reserveren</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam alias ea labore? Nesciunt, delectus veritatis! Suscipit enim animi minus ad odio odit, ratione quidem voluptates repudiandae excepturi sequi pariatur esse.</p>
-                <p>Een tafel reserveren kan op het nummer:</p>
-                <a href="tel:++32478554804"><strong>0478 55 48 04</strong></a></div>
-
-            <footer class="footer" id="contact">
-
-                <div class="map-container">
-                    <iframe title="google map" width="100%" height="350px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=20&center=50.9589%2C4.2326&key=AIzaSyB5irXEvoO4G6WLKzzESP3DOSQ9mxODRT0" allowfullscreen></iframe>
-                </div>
-
-                <div class="info">
-                    <div class="adres">
-                        <p>
-                            <strong>De Wereld van Alice</strong>
-                            <br>Kerstraat 1
-                            <br>1785 Merchtem
-                            <br><a href="mailto:info@dewereldvanalice.be">info@dewereldvanalice.be</a>
-                            <br><a href="tel:++32478554804">Tel: 0478 55 48 04</a>
-                        </p>
-                    </div>
-                    <br>
-                    <div class="openingsuren">
-                        <p>
-                            <strong>Openingsuren</strong>
-                            <br>woensdag van 9 tot 17u
-                            <br>donderdag van 12 tot 23u
-                            <br>vrijdag van 9 tot 17u
-                            <br>zaterdag van 9 tot 17u
-                        </p>
-                    </div>
-                </div>
-                <div class="social">
-                    <a href="https://urlgeni.us/facebook/_alice"><i class="fab fa-facebook-square fa-3x"></i></a>
-                    <a href="https://www.instagram.com/wereldvanalice/"><i class="fab fa-instagram-square fa-3x"></i></a>
-                </div>
-                <p class="copyright">code & design &copy; &nbsp;<a href="https://github.com/dannyvaneeckhoutte"> Danny Van Eeckhoutte</a></p>
-
-            </footer>
-
-        </div>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-        <script src="js/carousel.js"></script>
-        <script>
-        </script>
-</body>
-
+					<div class="info">
+						<div class="adres">
+							<p>
+								<strong>De Wereld van Alice</strong>
+								<br />Kerstraat 1 <br />1785 Merchtem <br /><a
+									href="mailto:info@dewereldvanalice.be"
+									>info@dewereldvanalice.be</a
+								>
+								<br /><a href="tel:++32478554804">Tel: 0478 55 48 04</a>
+							</p>
+						</div>
+						<br />
+						<div class="openingsuren">
+							<p>
+								<strong>Openingsuren</strong>
+								<br />woensdag van 9 tot 17u <br />donderdag van 12 tot 23u
+								<br />vrijdag van 9 tot 17u <br />zaterdag van 9 tot 17u
+							</p>
+						</div>
+					</div>
+					<div class="social">
+						<a href="https://urlgeni.us/facebook/_alice"
+							><i class="fab fa-facebook-square fa-3x"></i
+						></a>
+						<a href="https://www.instagram.com/wereldvanalice/"
+							><i class="fab fa-instagram-square fa-3x"></i
+						></a>
+					</div>
+					<p class="copyright">
+						code & design &copy; &nbsp;<a
+							href="https://github.com/dannyvaneeckhoutte"
+							target="_blank"
+						>
+							Danny Van Eeckhoutte</a
+						>
+					</p>
+				</footer>
+			</div>
+		</div>
+		<script src="js/switch.js"></script>
+		<script src="js/carousel.js"></script>
+		<script></script>
+	</body>
 </html>

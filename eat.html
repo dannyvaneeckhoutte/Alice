@@ -1,237 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="Description"
+			content="De Wereld van Alice: coffeeshop, restaurant en bar in het centrum van Merchtem"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/7b2dc1503a.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/light.css" id="theme" />
+		<title>De Wereld van Alice - home</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7b2dc1503a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/dark.css">
-    <title>De Wereld van Alice - home</title>
-</head>
+	<body>
+		<div class="container">
+			<div class="nav-container">
+				<nav class="navigation">
+					<ul class="main-menu">
+						<li>
+							<a href="#"><i class="fas fa-bars fa-lg"></i></a>
+							<ul class="sub-menu">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="#sfeer">Sfeer</a></li>
+								<li><a href="#do">Do</a></li>
+								<li><a href="#takeaway">Takeaway</a></li>
+								<li><a href="eat.html">Eat</a></li>
+								<li><a href="drink.html">Drink</a></li>
+								<li><a href="#shop">Shop</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="light-switch">
+					<a href="#" onclick="switchSheet()">
+						<i class="fas fa-lightbulb fa-2x"></i>
+					</a>
+				</div>
+			</div>
+			<header>
+				<div class="logo-main">
+					<img src="img/logo.svg" alt="Alice logo" />
+				</div>
+			</header>
 
-<body>
+			<div class="section-wrapper">
+				<div class="section section-eat" id="eat">
+					<div class="menu-home">
+						<img src="img/hamburger.svg" alt="Hamburger icon" />
+						<h3 class="page-title-eat">EAT</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+							odio molestiae! Incidunt, amet aliquam. Officiis autem fugiat
+							laboriosam aliquid beatae illum, accusamus eius temporibus
+							cupiditate optio consequuntur accusantium, aut obcaecati!
+						</p>
+					</div>
+					<div class="menu-ontbijt" id="ontbijt">
+						<img src="img/menu-breakfast.jpg" alt="ontbijt" />
+						<h3 class="menu-title menu-title-eat">Ontbijt</h3>
+						<table>
+							<tr>
+								<td>Spaghettisaus/vegi - per kg</td>
+								<td>€11.00</td>
+							</tr>
+							<tr>
+								<td>Chili con/sin carne - per kg</td>
+								<td>€12.00</td>
+							</tr>
+							<tr>
+								<td>Groenten met bouillon - per kg</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Quiche broccoli en spek</td>
+								<td>€20.00</td>
+							</tr>
+							<tr>
+								<td>Quiche broccoli en spek (halve portie)</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Groentenquiche</td>
+								<td>€20.00</td>
+							</tr>
+							<tr>
+								<td>Groentenquiche (halve portie)</td>
+								<td>€10.00</td>
+							</tr>
+						</table>
+					</div>
+					<div class="menu-lunch" id="lunch">
+						<img src="img/menu-lunch.jpg" alt="lunch" />
+						<h3 class="menu-title menu-title-eat">Lunch</h3>
+						<table>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+						</table>
+					</div>
+					<div class="menu-kids" id="kids">
+						<img src="img/menu-kids.jpg" alt="kids menu" />
+						<h3 class="menu-title menu-title-eat">Kids</h3>
+						<table>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+						</table>
+					</div>
+					<div class="menu-zoet" id="zoet">
+						<img src="img/menu-zoet.jpg" alt="zoet menu" />
+						<h3 class="menu-title menu-title-eat">Zoet</h3>
+						<table>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+							<tr>
+								<td>Lorem Ipsum</td>
+								<td>€10.00</td>
+							</tr>
+						</table>
+					</div>
+					<div class="menu-suggesties" id="suggesties">
+						<img src="img/menu-suggesties.jpg" alt="suggesties" />
+						<h3 class="menu-title menu-title-eat">Suggesties</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+							odio molestiae! Incidunt, amet aliquam. Officiis autem fugiat
+							laboriosam aliquid beatae illum, accusamus eius temporibus
+							cupiditate optio consequuntur accusantium, aut obcaecati!
+						</p>
+					</div>
+				</div>
+			</div>
 
-    <div class="container">
-        <div class="nav-container">
-            <nav class="navigation">
-                <ul class="main-menu">
-                    <li><a href="#"><i class="fas fa-bars fa-lg"></i></a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#sfeer">Sfeer</a></li>
-                            <li><a href="#do">Do</a></li>
-                            <li><a href="#takeaway">Takeaway</a></li>
-                            <li><a class="active" href="eat.html">Eat</a></li>
-                            <li><a href="drink.html">Drink</a></li>
-                            <li><a href="#shop">Shop</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="light-switch">
-                <a href="#">Let There Be Light!<i class="fas fa-lightbulb fa-lg"></i></a>
-            </div>
-        </div>
-        <header>
-            <div class="logo-main"><img src="img/logo.svg" alt="Alice logo"></div>
-        </header>
+			<footer class="footer" id="contact">
+				<div class="map-container">
+					<iframe
+						title="google map"
+						width="100%"
+						height="350px"
+						frameborder="0"
+						style="border: 0"
+						src="https://www.google.com/maps/embed/v1/view?zoom=20&center=50.9589%2C4.2326&key=AIzaSyB5irXEvoO4G6WLKzzESP3DOSQ9mxODRT0"
+						allowfullscreen
+					></iframe>
+				</div>
 
-        <div class="section-wrapper">
-
-            <div class="section section-eat" id="eat">
-                <div class="menu-home">
-                    <img src="img/hamburger.svg" alt="Hamburger icon">
-                    <h3 class="page-title-eat">EAT</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, odio molestiae! Incidunt, amet aliquam. Officiis autem fugiat laboriosam aliquid beatae illum, accusamus eius temporibus cupiditate optio consequuntur accusantium, aut
-                        obcaecati!
-                    </p>
-
-                </div>
-                <div class="menu-ontbijt" id="ontbijt">
-                    <img src="https://picsum.photos/g/1920/450" alt="ontbijt">
-                    <h3 class="menu-title menu-title-eat">Ontbijt</h3>
-                    <table>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="menu-lunch" id="lunch">
-                    <img src="https://picsum.photos/g/1920/450" alt="lunch">
-                    <h3 class="menu-title menu-title-eat">Lunch</h3>
-                    <table>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="menu-kids" id="kids">
-                    <img src="https://picsum.photos/g/1920/450" alt="kids menu">
-                    <h3 class="menu-title menu-title-eat">Kids</h3>
-                    <table>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="menu-zoet" id="zoet">
-                    <img src="https://picsum.photos/g/1920/450" alt="zoet menu">
-                    <h3 class="menu-title menu-title-eat">Zoet</h3>
-                    <table>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem Ipsum</td>
-                            <td>€10.00</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="menu-suggesties" id="suggesties">
-                    <img src="https://picsum.photos/g/1920/450" alt="suggesties">
-                    <h3 class="menu-title menu-title-eat">Suggesties</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, odio molestiae! Incidunt, amet aliquam. Officiis autem fugiat laboriosam aliquid beatae illum, accusamus eius temporibus cupiditate optio consequuntur accusantium, aut
-                        obcaecati!
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-        <footer class="footer" id="contact">
-
-            <div class="map-container">
-                <iframe title="google map" width="100%" height="350px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=20&center=50.9589%2C4.2326&key=AIzaSyB5irXEvoO4G6WLKzzESP3DOSQ9mxODRT0" allowfullscreen></iframe>
-            </div>
-
-            <div class="info">
-                <div class="adres">
-                    <p>
-                        <strong>De Wereld van Alice</strong>
-                        <br>Kerstraat 1
-                        <br>1785 Merchtem
-                        <br><a href="mailto:info@dewereldvanalice.be">info@dewereldvanalice.be</a>
-                        <br><a href="tel:++32478554804">Tel: 0478 55 48 04</a>
-                    </p>
-                </div>
-                <br>
-                <div class="openingsuren">
-                    <p>
-                        <strong>Openingsuren</strong>
-                        <br>maandag & dinsdag: gesloten
-                        <br>woensdag, vrijdag, zaterdag: van 9 tot 17u
-                        <br>donderdag: van 17 tot 23u
-                        <br>zondag: van 14 tot 17u
-                    </p>
-                </div>
-            </div>
-            <p class="copyright">code & design &copy; &nbsp;<a href="https://github.com/dannyvaneeckhoutte"> Danny Van Eeckhoutte</a></p>
-
-        </footer>
-
-    </div>
-
-</body>
-
+				<div class="info">
+					<div class="adres">
+						<p>
+							<strong>De Wereld van Alice</strong>
+							<br />Kerstraat 1 <br />1785 Merchtem <br /><a
+								href="mailto:info@dewereldvanalice.be"
+								>info@dewereldvanalice.be</a
+							>
+							<br /><a href="tel:++32478554804">Tel: 0478 55 48 04</a>
+						</p>
+					</div>
+					<br />
+					<div class="openingsuren">
+						<p>
+							<strong>Openingsuren</strong>
+							<br />maandag & dinsdag: gesloten <br />woensdag, vrijdag,
+							zaterdag: van 9 tot 17u <br />donderdag: van 17 tot 23u
+							<br />zondag: van 14 tot 17u
+						</p>
+					</div>
+				</div>
+				<p class="copyright">
+					code & design &copy; &nbsp;<a
+						href="https://github.com/dannyvaneeckhoutte"
+					>
+						Danny Van Eeckhoutte</a
+					>
+				</p>
+			</footer>
+		</div>
+		<script src="js/switch.js"></script>
+	</body>
 </html>

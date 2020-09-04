@@ -1,457 +1,462 @@
 /* colors */
 
 :root {
-    --black: #2c2c2c;
-    --dark-grey: #716f72;
-    --medium-grey: #cccccc;
-    --white: #fafafa;
-    --orange: #d99e87;
-    --red: #c56950;
-    --yellow: #eccb83;
-    --purple: #a594bd;
-    --purple-dark: #9e83c7;
-    --blue: #7fb9bf;
-    --dark-opacity-01: rgba(113, 111, 114, 0.1);
-    --facebook: #1778f2;
-    --instagram: #de3964;
+	--black: #2c2c2c;
+	--dark-grey: #716f72;
+	--medium-grey: #cccccc;
+	--white: #fafafa;
+	--orange: #d99e87;
+	--red: #c56950;
+	--yellow: #eccb83;
+	--purple: #a594bd;
+	--purple-dark: #9e83c7;
+	--blue: #7fb9bf;
+	--dark-opacity-01: rgba(113, 111, 114, 0.1);
+	--facebook: #1778f2;
+	--instagram: #de3964;
 }
-
 
 /* typography */
 
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: var(--white);
-    color: var(--black);
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--white);
+	color: var(--black);
 }
 
 h3.page-title-eat {
-    color: var(--red);
+	color: var(--red);
 }
 
 .menu-title {
-    display: block;
-    padding: 5px 0;
-    margin-top: 0;
-    color: var(--white);
+	display: block;
+	padding: 5px 0;
+	margin-top: -0.3em; /* remove whitespace between img & .menu-title */
+	color: var(--white);
 }
 
 .menu-title-eat {
-    background-color: var(--red);
+	background-color: var(--red);
 }
 
 .menu-title-drink {
-    background-color: var(--yellow);
+	background-color: var(--yellow);
 }
-
+#ontbijt img {
+	margin: 0;
+}
 .section p {
-    margin: 15px auto;
-    max-width: 80%;
+	margin: 15px auto;
+	max-width: 80%;
 }
 
 a {
-    text-decoration: none;
-    color: var(--white);
-    display: block;
+	text-decoration: none;
+	color: var(--dark-grey);
+	/* display: block; */
 }
 
 a.active {
-    font-weight: 700;
-    color: var(--orange);
+	font-weight: 700;
+	color: var(--orange);
 }
 
 i.fab {
-    color: var(--white);
+	color: var(--dark-grey);
 }
 
 .fa-facebook-square:hover {
-    color: var(--facebook);
+	color: var(--facebook);
 }
 
 .fa-instagram-square:hover {
-    color: var(--instagram);
+	color: var(--instagram);
 }
 
 .fa-lightbulb {
-    color: var(--medium-grey);
-    margin-left: 10px;
+	color: var(--dark-grey);
 }
 
+.fa-lightbulb:hover {
+	color: var(--black);
+}
 
 /* layout */
 
 .flex {
-    display: flex;
+	display: flex;
 }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
 }
 
 header {
-    max-width: 90vw;
-    min-height: 220px;
-    margin: 30px auto;
+	max-width: 600px;
+	margin: 30px auto;
 }
 
 .logo-main {
-    text-align: center;
+	text-align: center;
+	margin-top: 7em;
 }
 
 .section-wrapper {
-    text-align: center;
+	text-align: center;
 }
 
 .section {
-    /* max-width: 90vw; */
-    margin: 30 auto;
-    padding: 0 0 30px 0;
+	margin: 3em auto;
+	padding: 0 0 30px 0;
 }
 
 .section-sfeer {
-    width: 100vw;
+	width: 100vw;
 }
 
+.section-drink,
+.section-eat,
+.section-takeaway {
+	margin: 3em auto;
+	max-width: 800px;
+}
 
 /* Cards */
 
 .card {
-    padding: 2em;
+	padding: 2em;
 }
 
 .home-intro h2 {
-    color: var(--orange);
+	color: var(--orange);
+}
+
+.section-reserveer h2,
+.section-takeaway h2 {
+	color: var(--orange);
 }
 
 .intro-icons {
-    max-height: 30px;
-    margin: 40px 0 20px
+	max-height: 30px;
+	margin: 40px 0 20px;
 }
 
 .do-intro h3,
 .do-cafe h3,
 .do-wunder h3,
 .do-kermis h3 {
-    color: var(--purple);
+	color: var(--purple);
 }
 
-
-/* Menu */
+/* Navigation */
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 10px 10px 0;
-    margin: 0.5em 0 0 1em;
+	position: fixed;
+	z-index: 1;
+	background: var(--white);
+	opacity: 0.8;
+	top: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0.8em;
+	box-shadow: 0px 0px 12px var(--dark-grey);
 }
 
-
-/* .hamburger-menu {
-    background-color: var(--black);
+.navigation,
+.light-switch {
+	flex-basis: 100%;
 }
 
-.hamburger-menu a {
-    display: block;
-    padding: 0.4em 0 1em 1em;
+.light-switch {
+	text-align: right;
 }
 
-.hamburger-menu a:hover {
-    color: #c56950;
-    background-color: #333;
+/* make ALL links (main and submenu) have padding and background color */
+
+.main-menu a {
+	display: block;
 }
 
-.hamburger-menu label {
-    height: 2.2em;
-    display: block;
-    cursor: pointer;
-    background: url(../img/menu.svg) no-repeat left center;
-    padding: 15px 0 10px 50px;
+.main-menu a:hover {
+	font-weight: bold;
+	color: var(--orange);
 }
 
-input#menu {
-    display: none;
-    /* Hidden checkbox to toggle between states
+/* when hovering, reveal submenu */
+
+.main-menu li:hover .sub-menu {
+	display: block;
+	max-height: 300px;
 }
 
-input:checked+label {
-    background-image: url(../img/close.svg);
+/* Initial state of all submenus.
+   we set it to max-height: 0, and hide the overflowed content.
+*/
+
+.sub-menu {
+	overflow: hidden;
+	max-height: 0;
+	padding: 0.5em 0 0 0.3em;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
 }
-
-.menu-content {
-    max-height: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: var(--black);
-    opacity: 0.9;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
-    /* transition: max-height 1s ease-in-out;
-}*/
-
-
-/* Toggle Effect */
-
-
-/* input:checked~.menu-content {
-    max-height: 100%;
-    width: 100vw;
-    /* position: relative;
-}
-
-
-.menu-open {
-    max-height: 100%;
-} */
-
 
 /* image carousel slider */
 
 .carousel {
-    position: relative;
-    height: 600px;
-    width: 100%;
-    margin: 30px auto;
+	position: relative;
+	height: 600px;
+	width: 100%;
+	margin: 30px auto;
 }
 
 .carousel__image {
-    /* Fits/crops image into container: */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	/* Fits/crops image into container: */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .carousel__track--container {
-    /* background: maroon; */
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+	/* background: maroon; */
+	height: 100%;
+	position: relative;
+	overflow: hidden;
 }
 
 .carousel__track {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    position: relative;
-    /* height to stop track & its children from shrinking to 0 */
-    height: 100%;
-    transition: transform 0.6s ease-in-out;
-    /* for a smooth slide */
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	position: relative;
+	/* height to stop track & its children from shrinking to 0 */
+	height: 100%;
+	transition: transform 0.6s ease-in-out;
+	/* for a smooth slide */
 }
 
 .carousel__slide {
-    /* stacks images on top of eachother: */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+	/* stacks images on top of eachother: */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 .carousel__button {
-    position: absolute;
-    top: 50%;
-    /* moves top of button to halfway image */
-    transform: translateY(-50%);
-    /* moves button half of its height up on Y-axis */
-    border: 0;
-    cursor: pointer;
-    background: none;
-    opacity: 0.8;
-    text-shadow: 3px 3px 6px var(--black);
+	position: absolute;
+	top: 50%;
+	/* moves top of button to halfway image */
+	transform: translateY(-50%);
+	/* moves button half of its height up on Y-axis */
+	border: 0;
+	cursor: pointer;
+	background: none;
+	opacity: 0.8;
+	text-shadow: 3px 3px 6px var(--black);
 }
 
 .fa-chevron-circle-left,
 .fa-chevron-circle-right {
-    color: var(--white);
+	color: var(--white);
 }
 
 .carousel__button:hover {
-    opacity: 60%;
+	opacity: 60%;
 }
 
 .carousel__button:active {
-    color: var(--orange);
-    opacity: 60%;
-    text-shadow: none;
+	color: var(--orange);
+	opacity: 60%;
+	text-shadow: none;
 }
 
 .carousel__button--left {
-    left: 15px;
+	left: 15px;
 }
 
 .carousel__button--right {
-    right: 15px;
+	right: 15px;
 }
 
 .carousel__nav {
-    /* background: hotpink; */
-    display: flex;
-    justify-content: center;
-    padding: 8px 0;
+	/* background: hotpink; */
+	display: flex;
+	justify-content: center;
+	padding: 8px 0;
 }
 
 .carousel__indicator {
-    border: 0;
-    border-radius: 2px;
-    width: 30px;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.3);
-    margin: 0 6px;
-    cursor: pointer;
+	border: 0;
+	border-radius: 2px;
+	width: 30px;
+	height: 6px;
+	background: rgba(50, 50, 50, 0.3);
+	margin: 0 6px;
+	cursor: pointer;
 }
 
 .carousel__indicator.current-slide {
-    background: rgba(255, 255, 255, 0.8);
+	background: rgba(50, 50, 50, 0.8);
 }
 
 .is-hidden {
-    display: none;
+	display: none;
 }
-
 
 /* Light-mode switch */
 
 .light-switch img {
-    height: 2em;
+	height: 2em;
 }
 
 .intro {
-    padding-bottom: 30px;
+	padding-bottom: 30px;
 }
 
 .img-round {
-    max-width: 180px;
-    border-radius: 50%;
-    margin: 15px;
-    transition: all 0.1s ease-in-out;
+	max-width: 180px;
+	border-radius: 50%;
+	margin: 15px;
+	transition: all 0.1s ease-in-out;
 }
 
 .img-round:hover {
-    border: 3px solid var(--purple);
+	border: 3px solid var(--blue);
 }
 
 footer {
-    background-color: var(--dark-opacity-01);
-    justify-content: center;
+	background-color: var(--medium-grey);
+	justify-content: center;
 }
 
 .info {
-    padding: 2em;
-    text-align: center;
+	padding: 2em;
+	text-align: center;
+	line-height: 2em;
+}
+
+footer .fab {
+	padding: 0 0.3em 1em;
 }
 
 .copyright {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    padding-bottom: 2em;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	padding-bottom: 1em;
 }
 
 .copyright a {
-    color: var(--orange);
+	color: var(--orange);
 }
 
 .copyright a:hover {
-    text-decoration: underline;
+	font-weight: 700;
 }
-
 
 /* table */
 
 table {
-    margin: 15px 0 80px;
+	margin: 3em auto;
+	width: 100%;
 }
 
 table,
 th,
 td {
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px dotted var(--white);
-    border-collapse: collapse;
+	border-bottom: 1px dotted var(--dark-grey);
+	border-collapse: collapse;
 }
 
-th,
-td {
-    padding: 10px;
+table td {
+	padding: 10px;
+	text-align: right;
 }
-
+table td:first-child {
+	text-align: left;
+}
 
 /* Buttons */
 
 button.btn {
-    /* inline-block om button even groot dan tekst te houden */
-    display: inline-block;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 15px 0% 5px;
-    margin: 30px 0 15px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid var(--white);
-    outline: 0;
-    background: var(--purple);
-    color: var(--white);
-    cursor: pointer;
-    box-shadow: 0px 8px 10px -4px var(--black);
-    transition: color 0.1s ease-in;
+	/* inline-block om button even groot dan tekst te houden */
+	display: inline-block;
+	font-weight: 700;
+	font-size: 16px;
+	margin: 15px 0% 5px;
+	margin: 30px 0 15px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: 1px solid var(--white);
+	outline: 0;
+	background: var(--purple);
+	color: var(--white);
+	cursor: pointer;
+	box-shadow: 0px 8px 10px -4px var(--dark-grey);
+	transition: color 0.1s ease-in;
 }
 
 button.btn:hover {
-    background-color: var(--purple-dark);
+	background-color: var(--purple-dark);
 }
 
 .btn:active {
-    box-shadow: none;
-    position: relative;
-    top: 2px;
-    border: 1px solid var(--purple);
+	box-shadow: none;
+	position: relative;
+	top: 2px;
+	border: 1px solid var(--purple);
 }
-
 
 /* bestelformulier */
 
 .form-row {
-    padding: 0.5em;
+	padding: 0.5em;
 }
 
 .form-row label {
-    text-align: right;
-    padding-right: 1em;
+	text-align: right;
+	padding-right: 1em;
 }
 
 .form-row input {
-    width: 4em;
-    height: 2em;
-    padding-left: 30px;
+	width: 4em;
+	height: 2em;
+	padding-left: 30px;
 }
 
 .bestel-prijs {
-    padding-left: 30px;
+	padding-left: 30px;
 }
 
 .bestel-subtotaal {
-    padding-left: 30px;
+	padding-left: 30px;
 }
-
 
 /* Media queries */
 
 @media screen and (min-width: 768px) {
-    .home-detail,
-    .do-detail {
-        display: flex;
-        align-content: space-between;
-    }
-    .info {
-        display: flex;
-        justify-content: center;
-    }
-    .info .adres {
-        text-align: right;
-        padding-right: 1.5em;
-    }
-    .info .openingsuren {
-        text-align: left;
-        padding-left: 1.5em;
-    }
+	.home-detail,
+	.do-detail {
+		display: flex;
+		align-content: space-between;
+	}
+	.info {
+		display: flex;
+		justify-content: center;
+	}
+	.adres {
+		flex-basis: 100%;
+		text-align: right;
+		padding-right: 0.8em;
+	}
+	.openingsuren {
+		flex-basis: 100%;
+		text-align: left;
+		padding-left: 0.8em;
+	}
 }

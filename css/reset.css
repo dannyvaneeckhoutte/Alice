@@ -1,13 +1,13 @@
 html {
-    box-sizing: border-box;
-    font-size: 18px;
-    line-height: 1.4em;
+	box-sizing: border-box;
+	font-size: 18px;
+	line-height: 1.4em;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body,
@@ -20,16 +20,16 @@ h6,
 p,
 ol,
 ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 ol,
 ul {
-    list-style: none;
+	list-style: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
