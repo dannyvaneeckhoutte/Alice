@@ -47,16 +47,24 @@ h3.page-title-eat {
 }
 .section p {
 	margin: 15px auto;
-	max-width: 80%;
+	max-width: 90vw;
 }
 
 a {
 	text-decoration: none;
 	color: var(--dark-grey);
-	/* display: block; */
+	display: block;
 }
 
-a.active {
+.adres a {
+	font-weight: 700;
+	color: var(--black);
+}
+.adres a:hover {
+	color: var(--orange);
+}
+
+a:hover {
 	font-weight: 700;
 	color: var(--orange);
 }
@@ -95,7 +103,7 @@ i.fab {
 
 header {
 	max-width: 600px;
-	margin: 30px auto;
+	margin: 0 auto;
 }
 
 .logo-main {
@@ -156,7 +164,7 @@ header {
 	position: fixed;
 	z-index: 1;
 	background: var(--white);
-	opacity: 0.8;
+	opacity: 0.9;
 	top: 0;
 	width: 100%;
 	display: flex;
@@ -444,6 +452,8 @@ button.btn:hover {
 	.do-detail {
 		display: flex;
 		align-content: space-between;
+		margin: 0px auto;
+		justify-content: space-evenly;
 	}
 	.info {
 		display: flex;
@@ -458,5 +468,8 @@ button.btn:hover {
 		flex-basis: 100%;
 		text-align: left;
 		padding-left: 0.8em;
+	}
+	.section p {
+		max-width: 600px;
 	}
 }
