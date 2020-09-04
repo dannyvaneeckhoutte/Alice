@@ -196,7 +196,8 @@ header {
 
 /* when hovering, reveal submenu */
 
-.main-menu li:hover .sub-menu {
+.main-menu li:hover .sub-menu,
+.main-menu li:active .sub-menu {
 	display: block;
 	max-height: 300px;
 }
