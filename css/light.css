@@ -162,8 +162,8 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 0.8em;
-	box-shadow: 0px 0px 12px var(--dark-grey);
+	padding: 0.8em 0.8em 0.4em;
+	box-shadow: 0px 0px 12px var(--medium-grey);
 }
 
 .navigation,
