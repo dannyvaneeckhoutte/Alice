@@ -16,9 +16,15 @@
 			src="https://kit.fontawesome.com/7b2dc1503a.js"
 			crossorigin="anonymous"
 		></script>
+		<!-- <link rel="stylesheet" href="css/swiper-bundle.css" /> -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/light.css" id="theme" />
 		<link rel="stylesheet" href="css/hamburgers.css" />
+
 		<title>De Wereld van Alice - home</title>
 	</head>
 
@@ -72,32 +78,24 @@
 						De bovenverdieping is een creatieve broeiplaats...
 					</p>
 				</div>
-				<div class="section section-sfeer carousel" id="sfeer">
-					<div class="carousel__track--container">
-						<ul class="carousel__track">
-							<li class="carousel__slide current-slide">
-								<img class="carousel__image" src="img/slide-1.jpg" alt="" />
-							</li>
-							<li class="carousel__slide">
-								<img class="carousel__image" src="img/slide-2.jpg" alt="" />
-							</li>
-							<li class="carousel__slide">
-								<img class="carousel__image" src="img/slide-3.jpg" alt="" />
-							</li>
-						</ul>
+				<div class="section section-sfeer swiper-container" id="sfeer">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide"><img src="img/slide-1.jpg" alt="" /></div>
+						<div class="swiper-slide"><img src="img/slide-2.jpg" alt="" /></div>
+						<div class="swiper-slide"><img src="img/slide-3.jpg" alt="" /></div>
+						...
 					</div>
-					<button class="carousel__button carousel__button--left is-hidden">
-						<i class="fas fa-chevron-circle-left fa-3x"></i>
-					</button>
-					<button class="carousel__button carousel__button--right">
-						<i class="fas fa-chevron-circle-right fa-3x"></i>
-					</button>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
 
-					<div class="carousel__nav">
-						<button class="carousel__indicator current-slide"></button>
-						<button class="carousel__indicator"></button>
-						<button class="carousel__indicator"></button>
-					</div>
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+
+					<!-- If we need scrollbar -->
+					<!-- <div class="swiper-scrollbar"></div> -->
 				</div>
 				<div class="section section-do" id="do">
 					<div class="intro do-intro">
@@ -242,7 +240,7 @@
 						</div>
 					</div>
 					<div class="social">
-						<a href="https://urlgeni.us/facebook/_alice"
+						<a href="https://www.facebook.com/761543060570041"
 							><i class="fab fa-facebook-square fa-3x"></i
 						></a>
 						<a href="https://www.instagram.com/wereldvanalice/"
@@ -260,8 +258,12 @@
 				</footer>
 			</div>
 		</div>
+		<!-- Hamburger menu + animation -->
 		<script src="js/menu.js"></script>
+		<!-- Theme switcher -->
 		<script src="js/switch.js"></script>
-		<script src="js/carousel.js"></script>
+		<!-- image slider -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="js/swiper.js"></script>
 	</body>
 </html>
