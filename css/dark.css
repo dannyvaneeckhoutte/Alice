@@ -3,7 +3,7 @@
 :root {
 	--black: #2c2c2c;
 	--dark-grey: #716f72;
-	--medium-grey: #cccccc;
+	--medium-grey: #969497;
 	--white: #fafafa;
 	--orange: #d99e87;
 	--red: #c56950;
@@ -81,7 +81,7 @@ i.fab {
 
 .fa-lightbulb {
 	color: var(--medium-grey);
-	margin-left: 20px;
+	font-size: 1.5em;
 }
 
 .fa-lightbulb:hover {

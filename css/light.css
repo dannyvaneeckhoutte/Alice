@@ -3,7 +3,7 @@
 :root {
 	--black: #2c2c2c;
 	--dark-grey: #716f72;
-	--medium-grey: #cccccc;
+	--medium-grey: #969497;
 	--white: #fafafa;
 	--orange: #d99e87;
 	--red: #c56950;
@@ -86,7 +86,8 @@ i.fab {
 }
 
 .fa-lightbulb {
-	color: var(--dark-grey);
+	color: var(--medium-grey);
+	font-size: 1.5em;
 }
 
 .fa-lightbulb:hover {
@@ -175,7 +176,7 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	/* padding: 0.8em 0.8em 0.4em; */
-	box-shadow: 0px 0px 12px var(--medium-grey);
+	box-shadow: 0px 0px 5px var(--medium-grey);
 }
 
 .topnav {
