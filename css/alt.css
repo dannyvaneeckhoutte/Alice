@@ -1,0 +1,33 @@
+.topnav {
+	overflow: hidden;
+	position: relative;
+	transition: height 0.5s;
+}
+
+.topnav #myLinks {
+	display: none;
+	transition: all 0.5s ease-out;
+}
+
+.topnav a {
+	color: black;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+}
+
+.topnav a.icon {
+	display: block;
+	position: absolute;
+	padding: 0;
+	left: 0.5em;
+	top: 0.5em;
+}
+
+.topnav a:hover {
+	color: black;
+}
+.active {
+	text-align: right;
+}

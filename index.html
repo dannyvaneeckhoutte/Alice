@@ -24,28 +24,25 @@
 	<body>
 		<div class="container">
 			<div class="nav-container">
-				<nav class="navigation">
-					<ul class="main-menu">
-						<li>
-							<a href="#"><i class="fas fa-bars fa-lg"></i></a>
-							<ul class="sub-menu">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="#sfeer">Sfeer</a></li>
-								<li><a href="#do">Do</a></li>
-								<li><a href="#takeaway">Takeaway</a></li>
-								<li><a href="eat.html">Eat</a></li>
-								<li><a href="drink.html">Drink</a></li>
-								<li><a href="#shop">Shop</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<div class="light-switch">
-					<a href="#" onclick="switchSheet()">
-						<i class="fas fa-lightbulb fa-lg"></i>
+				<div class="topnav">
+					<a href="#"></a>
+					<div id="myLinks">
+						<a href="index.html">Home</a>
+						<a href="#sfeer">Sfeer</a>
+						<a href="#do">Do</a>
+						<a href="#takeaway">Takeaway</a>
+						<a href="eat.html">Eat</a>
+						<a href="drink.html">Drink</a>
+						<a href="#shop">Shop</a>
+						<a href="#contact">Contact</a>
+					</div>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars fa-lg"></i>
 					</a>
 				</div>
+				<a href="#" class="style-switch" onclick="switchSheet()">
+					<i class="fas fa-lightbulb fa-lg"></i>
+				</a>
 			</div>
 			<header>
 				<div class="logo-main">
@@ -251,6 +248,15 @@
 		</div>
 		<script src="js/switch.js"></script>
 		<script src="js/carousel.js"></script>
-		<script></script>
+		<script>
+			function myFunction() {
+				var x = document.getElementById('myLinks');
+				if (x.style.display === 'block') {
+					x.style.display = 'none';
+				} else {
+					x.style.display = 'block';
+				}
+			}
+		</script>
 	</body>
 </html>

@@ -170,47 +170,46 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 0.8em 0.8em 0.4em;
-	/* box-shadow: 0px 0px 1px var(--dark-grey); */
+	/* padding: 0.8em 0.8em 0.4em; */
 }
 
-.navigation,
-.light-switch {
-	flex-basis: 100%;
+.topnav {
+	overflow: hidden;
+	position: relative;
+	min-height: 3em;
+	width: 100%;
+	box-shadow: 0px 0px 2px var(--dark-grey);
 }
 
-.light-switch {
-	text-align: right;
+.topnav #myLinks {
+	padding: 1.5em 0 1em 1em;
+	display: none;
 }
 
-/* make ALL links (main and submenu) have padding and background color */
-
-.main-menu a {
+.topnav a {
+	color: var(--medium-grey);
+	padding-top: 0.8em;
+	text-decoration: none;
 	display: block;
 }
 
-.main-menu a:hover {
-	font-weight: bold;
+.topnav a.icon {
+	display: block;
+	position: absolute;
+	padding: 0;
+	left: 1em;
+	top: 1em;
+}
+
+.topnav a:hover {
 	color: var(--orange);
 }
 
-/* when hovering, reveal submenu */
-
-.main-menu li:hover .sub-menu {
-	display: block;
-	max-height: 300px;
-}
-
-/* Initial state of all submenus.
-   we set it to max-height: 0, and hide the overflowed content.
-*/
-
-.sub-menu {
-	overflow: hidden;
-	max-height: 0;
-	padding: 0.5em 0 0 0.3em;
-	transition: all 0.5s ease-out;
-	-webkit-transition: all 0.5s ease-out;
+.style-switch {
+	text-align: right;
+	position: absolute;
+	right: 1em;
+	top: 1em;
 }
 
 /* image carousel slider */
