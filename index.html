@@ -33,7 +33,7 @@
 						aria-label="Menu"
 						aria-controls="navigation"
 					>
-						<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<a href="javascript:void(0);" class="icon" onclick="showMenu()">
 							<span class="hamburger-box">
 								<span class="hamburger-inner is-active"></span>
 							</span>
@@ -260,31 +260,8 @@
 				</footer>
 			</div>
 		</div>
+		<script src="js/menu.js"></script>
 		<script src="js/switch.js"></script>
 		<script src="js/carousel.js"></script>
-
-		<!-- Show/hide menu -->
-		<script>
-			function myFunction() {
-				var x = document.getElementById('myLinks');
-				if (x.style.display === 'block') {
-					x.style.display = 'none';
-				} else {
-					x.style.display = 'block';
-				}
-			}
-		</script>
-
-		<!-- animate hamburger menu -->
-		<script>
-			// Look for .hamburger
-			var hamburger = document.querySelector('.hamburger');
-			// On click
-			hamburger.addEventListener('click', function () {
-				// Toggle class "is-active"
-				hamburger.classList.toggle('is-active');
-				// Do something else, like open/close menu
-			});
-		</script>
 	</body>
 </html>
