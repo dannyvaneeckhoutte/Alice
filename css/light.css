@@ -283,7 +283,6 @@ table {
 }
 
 table,
-th,
 td {
 	border-bottom: 1px dotted var(--dark-grey);
 	border-collapse: collapse;

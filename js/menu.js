@@ -10,7 +10,7 @@ hamburger.addEventListener('click', function () {
 
 // Show/hide menu
 function showMenu() {
-	var x = document.getElementById('myLinks');
+	var x = document.getElementById('links');
 	if (x.style.display === 'block') {
 		x.style.display = 'none';
 	} else {

@@ -1,7 +1,7 @@
 {
-  "liveServer.settings.port": 5501,
-  "editor.detectIndentation": false,
-  "workbench.tree.indent": 6,
-  "editor.tabSize": 2,
-  "prettier.useTabs": true
+	"liveServer.settings.port": 5501,
+	"editor.detectIndentation": false,
+	"workbench.tree.indent": 6,
+	"editor.tabSize": 3,
+	"prettier.useTabs": true
 }
