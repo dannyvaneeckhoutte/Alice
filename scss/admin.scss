@@ -1,0 +1,64 @@
+$black: #2c2c2c;
+$dark: #716f72;
+$medium: #969497;
+$white: #fafafa;
+$red: #c56950;
+$blue: #60b0b9;
+$facebook: #1778f2;
+$instagram: #de3964;
+
+$font-main: 'Roboto', sans-serif;
+
+body {
+	font-family: $font-main;
+	background-color: $blue;
+	color: $white;
+	text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+	// display: block;
+	&:hover {
+		color: $white;
+		text-decoration: underline;
+	}
+}
+
+nav {
+	text-align: left;
+}
+section {
+	max-width: 1440px;
+	margin: 4em auto;
+	padding: 0 0.5em;
+}
+// Table
+
+table {
+	margin: 3em auto;
+	width: 100%;
+	border-collapse: collapse;
+	td,
+	th {
+		padding: 10px;
+		text-align: center;
+		border-bottom: 1px dotted $white;
+		&:first-child {
+			text-align: left;
+		}
+		&:last-child {
+			text-align: right;
+		}
+	}
+}
