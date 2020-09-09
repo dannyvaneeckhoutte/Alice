@@ -9,7 +9,8 @@ $yellow: #eccb83;
 $purple: #a594bd;
 $indigo: #9e83c7;
 $blue: #7fb9bf;
-$dark-opacity-01: rgba(113, 111, 114, 0.1);
+$blue-op-01: rgba(127, 185, 191, 0.1);
+$dark-op-01: rgba(113, 111, 114, 0.1);
 $facebook: #1778f2;
 $instagram: #de3964;
 $swiper-theme-color: #fafafa;
@@ -82,6 +83,18 @@ header {
 		}
 	}
 }
+/* image slider (swiper.js)  */
+.swiper-container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+	& .swiper-button-next,
+	.swiper-button-prev {
+		color: $white;
+	}
+}
 
 .card-wrapper {
 	margin: 2em auto;
@@ -90,14 +103,19 @@ header {
 	align-items: center;
 	& .card {
 		max-width: 18em;
-		background-color: $blue;
+		background-color: $blue-op-01;
 		margin: 0.6em;
 		padding: 0 0 0.3em 0;
 		border-radius: 2%;
+		& img {
+			border-bottom: 0.3em solid $blue;
+		}
+		& h3 {
+			color: $blue;
+		}
 	}
 	& .card-txt {
 		padding: 1em;
-		color: $white;
 	}
 	@media screen and (min-width: 768px) {
 		flex-direction: row;
