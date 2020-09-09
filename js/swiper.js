@@ -1,6 +1,5 @@
 var swiper = new Swiper('.swiper-container', {
-	// loop: true,
-	slidesPerView: 'auto',
+	loop: true,
 	// pinch or dbl-click to zoom img
 	zoom: true,
 	navigation: {
@@ -12,7 +11,7 @@ var swiper = new Swiper('.swiper-container', {
 	// 	type: 'bullets',
 	// 	clickable: 'true',
 	// },
-	autoplay: {
-		delay: 3000,
-	},
+	// autoplay: {
+	// 	delay: 3000,
+	// },
 });

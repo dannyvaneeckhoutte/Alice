@@ -21,7 +21,7 @@ a {
     text-decoration: underline; }
 
 .main-wrapper {
-  padding-top: 6em; }
+  padding-top: 5em; }
 
 header {
   max-width: 40em;
@@ -43,6 +43,57 @@ header {
     color: #c56950; }
   .section-reserveer h1 {
     color: #c56950; }
+
+.toggleMenu {
+  text-align: center; }
+
+.toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em; }
+  .toggle-wrapper .toggle-eat-txt {
+    color: #d99e87; }
+  .toggle-wrapper .toggle-drink-txt {
+    color: #7fb9bf; }
+
+input {
+  display: none; }
+
+input[name='toggle'] + .toggleMenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; }
+
+input[name='toggle']:checked + .toggleMenu {
+  max-height: 100%; }
+
+.fas {
+  padding: 0 0.6em; }
+
+.fa-hamburger {
+  color: #d99e87; }
+  .fa-hamburger:hover {
+    text-shadow: 0px 0px 3px #d99e87;
+    cursor: pointer;
+    color: #cd7f60; }
+
+.fa-glass-martini-alt {
+  color: #7fb9bf; }
+  .fa-glass-martini-alt:hover {
+    text-shadow: 0px 0px 3px #7fb9bf;
+    cursor: pointer;
+    color: #5da6ae; }
+
+.menu-heading {
+  height: 100%; }
+  .menu-heading h3 {
+    margin: 0 auto;
+    padding-bottom: 0.2em;
+    color: #fafafa; }
+  .menu-heading.menu-heading-eat {
+    background-color: #d99e87; }
+  .menu-heading.menu-heading-drink {
+    background-color: #7fb9bf; }
 
 /* image slider (swiper.js)  */
 .swiper-container {
@@ -116,7 +167,7 @@ footer {
 
 .nav-container {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background: #fafafa;
   opacity: 0.9;
   top: 0;
