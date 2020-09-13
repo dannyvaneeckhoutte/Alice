@@ -60,34 +60,23 @@ while($res = mysqli_fetch_array($result))
 <br /><br />
 
 <form name="form1" method="post" action="edit.php">
-   <table border="0">
-      <tr>
-         <td>Categorie</td>
-         <td>
-            <input type="text" name="categorie" value="<?php echo $categorie;?>">
-            <!-- <select name="categorie" id="categorie">
+   <label for="categorie">Categorie</label>
+   <input type="text" name="categorie" />
+   <!-- <select name="categorie" id="categorie">
 							<option value="lunch">Lunch</option>
 							<option value="zoet">Zoet</option>
 						</select> -->
-         </td>
-      </tr>
-      <tr>
-         <td>Gerecht</td>
-         <td><input type="text" name="gerecht" value="<?php echo $gerecht;?>"></td>
-      </tr>
-      <tr>
-         <td>Prijs</td>
-         <td><input type="text" name="prijs" value="<?php echo $prijs;?>"></td>
-      </tr>
-      <tr>
-         <td>Actief</td>
-         <td><input type="number" name="actief" value="<?php echo $actief;?>" min="0" max="1"></td>
-      </tr>
-      <tr>
-         <td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-         <td><input type="submit" name="update" value="Update"></td>
-      </tr>
-   </table>
+
+   <label for="gerecht">Gerecht</label>
+   <input type="text" name="gerecht" />
+
+   <label for="prijs">Prijs</label>
+   <input type="text" name="prijs" />
+
+   <label for="actief">Actief?</label>
+   <input type="number" name="actief" value="0" min="0" max="1" />
+
+   <input type="submit" name="Submit" value="Aanpassen" />
 </form>
 
 <?php include ("includes/footer.php") ?>
