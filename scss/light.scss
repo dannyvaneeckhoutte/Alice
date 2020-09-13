@@ -106,7 +106,7 @@ header {
 	}
 }
 
-input {
+input[name='toggle'] {
 	display: none;
 }
 
@@ -303,7 +303,7 @@ footer {
 // Table
 
 table {
-	margin: 3em auto;
+	margin: 0 auto;
 	width: 100%;
 	border-collapse: collapse;
 	td {
@@ -313,5 +313,16 @@ table {
 		&:first-child {
 			text-align: left;
 		}
+	}
+}
+
+// bestelformulier
+
+form {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	& input[type='text'] {
+		margin-bottom: 0.5em;
 	}
 }
