@@ -43,6 +43,13 @@ a {
 		text-decoration: underline;
 	}
 }
+// fix for overshooting link
+:target:before {
+	content: '';
+	display: block;
+	height: 3em;
+	margin: -3em 0 0;
+}
 
 .main-wrapper {
 	padding-top: 5em;
@@ -63,7 +70,7 @@ header {
 	}
 	& a {
 		&:hover {
-			color: $red;
+			color: $blue;
 		}
 	}
 
@@ -199,11 +206,14 @@ input[name='toggle'] {
 
 footer {
 	background-color: $black;
-	& p {
-		color: $white;
-	}
 	& a {
-		color: $red;
+		color: $blue;
+	}
+	& p {
+		color: #fafafa;
+	}
+	& address {
+		color: #fafafa;
 	}
 }
 
@@ -281,7 +291,7 @@ footer {
 		text-decoration: none;
 		display: block;
 		&:hover {
-			color: $red;
+			color: $blue;
 		}
 	}
 	a.icon {

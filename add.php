@@ -40,7 +40,7 @@ if(isset($_POST['Submit'])) {
 		$result = mysqli_query($mysqli, "INSERT INTO gerechten(categorie, gerecht, prijs, actief) VALUES('$categorie', '$gerecht', '$prijs', '$actief')");
 		
 		//display success message
-		echo "<font color='green'>Data added successfully.";
+		echo "<font color='green'>Gerecht succesvol toegevoegd.";
 		echo "<br/><a href='admin.php'>Bekijk resultaat</a>";
 	}
 }

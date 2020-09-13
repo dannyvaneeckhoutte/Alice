@@ -20,6 +20,12 @@ a {
     color: #fafafa;
     text-decoration: underline; }
 
+:target:before {
+  content: '';
+  display: block;
+  height: 3em;
+  margin: -3em 0 0; }
+
 .main-wrapper {
   padding-top: 5em; }
 
@@ -36,7 +42,7 @@ header {
     max-width: 32em;
     margin: 0 auto; }
   .section a:hover {
-    color: #c56950; }
+    color: #7fb9bf; }
   .section-events h1 {
     color: #7fb9bf; }
   .section-takeaway h1 {
@@ -132,10 +138,12 @@ input[name='toggle']:checked + .toggleMenu {
 
 footer {
   background-color: #2c2c2c; }
+  footer a {
+    color: #7fb9bf; }
   footer p {
     color: #fafafa; }
-  footer a {
-    color: #c56950; }
+  footer address {
+    color: #fafafa; }
 
 .fab {
   color: #fafafa; }
@@ -194,7 +202,7 @@ footer {
     text-decoration: none;
     display: block; }
     .topnav a:hover {
-      color: #c56950; }
+      color: #7fb9bf; }
   .topnav a.icon {
     display: block;
     position: absolute;

@@ -46,13 +46,16 @@ $result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"
 
             <a href="#"></a>
             <div id="links">
-               <a onclick="closeMenu()" href="index.html">Home</a>
+               <a onclick="closeMenu()" href="index.php">Home</a>
                <a onclick="closeMenu()" href="#sfeer">Sfeer</a>
                <a onclick="closeMenu()" href="#events">Do</a>
                <a onclick="closeMenu()" href="#takeaway">Takeaway</a>
                <a onclick="closeMenu()" href="menu.html">Menu</a>
                <a onclick="closeMenu()" href="#shop">Shop</a>
                <a onclick="closeMenu()" href="#contact">Contact</a>
+               <br>
+               <a style="color:red;" onclick="closeMenu()" href="admin.php">Admin</a>
+
             </div>
          </nav>
 
@@ -197,7 +200,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"
 
          <div class="info">
             <div class="adres">
-               <p>
+               <address>
                   <strong>De Wereld van Alice</strong>
                   <br />Kerstraat 1 <br />1785 Merchtem <br />
                   <a href="mailto:info@dewereldvanalice.be">
@@ -205,7 +208,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"
                   </a>
                   <br />
                   <a href="tel:+32478554804"> Tel: 0478 55 48 04 </a>
-               </p>
+                  </p>
             </div>
             <br />
             <div class="openingsuren">
@@ -213,7 +216,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"
                   <strong>Openingsuren</strong>
                   <br />woensdag van 9 tot 17u <br />donderdag van 12 tot 23u
                   <br />vrijdag van 9 tot 17u <br />zaterdag van 9 tot 17u
-               </p>
+                  </address>
             </div>
          </div>
          <div class="social">
