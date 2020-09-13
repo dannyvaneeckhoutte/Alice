@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="stylesheet" href="./css/admin.css" />
 		<title>Alice - takeaway</title>
 	</head>
@@ -12,38 +16,23 @@
 		<br /><br />
 
 		<form action="add.php" method="post" name="form1">
-			<table width="25%" border="0">
-				<tr>
-					<td>Categorie</td>
-					<td>
-						<input type="text" name="categorie" />
-						<!-- <select name="categorie" id="categorie">
+			<label for="categorie"></label>
+			<input type="text" name="categorie" />
+			<!-- <select name="categorie" id="categorie">
 							<option value="lunch">Lunch</option>
 							<option value="zoet">Zoet</option>
 						</select> -->
-					</td>
-				</tr>
-				<tr>
-					<td>Gerecht</td>
-					<td><input type="text" name="gerecht" /></td>
-				</tr>
-				<tr>
-					<td>Prijs</td>
-					<td><input type="text" name="prijs" /></td>
-				</tr>
-				<tr>
-					<td>Actief?</td>
-					<td>
-						<input type="number" name="actief" value="0" min="0" max="1" />
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<input type="submit" name="Submit" value="Add" />
-					</td>
-				</tr>
-			</table>
+
+			<label for="gerecht">Gerecht</label>
+			<input type="text" name="gerecht" />
+
+			<label for="prijs">Prijs</label>
+			<input type="text" name="prijs" />
+
+			<label for="actief">Actief?</label>
+			<input type="number" name="actief" value="0" min="0" max="1" />
+
+			<input type="submit" name="Submit" value="Toevoegen" />
 		</form>
 	</body>
 </html>

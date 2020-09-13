@@ -88,19 +88,14 @@ form {
 	flex-direction: column;
 	margin: 3em auto;
 	padding: 0 1em;
-	max-width: 450px;
+	max-width: 500px;
 	label {
+		width: 30%;
 		text-align: left;
 		font-weight: 500;
 	}
 }
-input {
-	font-size: 100%;
-	margin: 0.2em 0 0.6em;
-	border: 1px solid $white;
-	border-radius: 8px;
-	padding: 0.3em;
-}
+input,
 select {
 	font-size: 100%;
 	margin: 0.2em 0 0.6em;
@@ -108,6 +103,7 @@ select {
 	border-radius: 8px;
 	padding: 0.3em;
 }
+
 textarea {
 	font-size: 100%;
 	margin: 0.2em 0 0.6em;

@@ -3,8 +3,8 @@
 include_once("config.php");
 
 //fetching data in descending order (lastest entry first)
-//$result = mysql_query("SELECT * FROM gerechten ORDER BY id DESC");
-$result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY id DESC"); // using mysqli_query instead
+//$result = mysql_query("SELECT * FROM gerechten ORDER BY categorie DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"); // using mysqli_query instead
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +15,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY id DESC"); // 
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
    <meta name="Description" content="De Wereld van Alice: coffeeshop, restaurant en bar in het centrum van Merchtem" />
+   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet" />
    <script src="https://kit.fontawesome.com/7b2dc1503a.js" crossorigin="anonymous"></script>
