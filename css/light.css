@@ -209,15 +209,25 @@ footer {
   top: 1em; }
 
 table {
-  margin: 0 auto;
+  margin: 3em auto;
+  table-layout: auto;
   width: 100%;
   border-collapse: collapse; }
   table td {
-    padding: 10px;
-    text-align: right;
-    border-bottom: 1px dotted #969497; }
-    table td:first-child {
-      text-align: left; }
+    border-top: 1px dotted #716f72;
+    text-align: left;
+    padding: 10px; }
+    table td:last-child {
+      text-align: right; }
+    table td:nth-child(2) {
+      width: 50%; }
+  table th {
+    text-align: left;
+    padding: 10px; }
+    table th:last-child {
+      text-align: right; }
+    table th:nth-child(2) {
+      width: 50%; }
 
 form {
   text-align: left;

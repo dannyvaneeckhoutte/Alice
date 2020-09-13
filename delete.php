@@ -6,7 +6,7 @@ include("config.php");
 $id = $_GET['id'];
 
 //deleting the row from table
-$result = mysqli_query($mysqli, "DELETE FROM takeaway WHERE id=$id");
+$result = mysqli_query($mysqli, "DELETE FROM gerechten WHERE id=$id");
 
 //redirecting to the display page (admin.php in our case)
 header("Location:admin.php");

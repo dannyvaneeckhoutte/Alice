@@ -1,3 +1,12 @@
+<?php
+//including the database connection file
+include_once("config.php");
+
+//fetching data in descending order (lastest entry first)
+//$result = mysql_query("SELECT * FROM gerechten ORDER BY id DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY id DESC"); // using mysqli_query instead
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,13 +145,21 @@
             <br />
             <a href="tel:+32478554804"><strong>0478 55 48 04</strong></a>
             <br>
+
             <table>
-               <?php
-				
-               include('includes/takeawayDB.inc.php');
-               gerechtenLijst();
-      
-            ?>
+               <tr>
+                  <th>Gerecht</th>
+                  <th>Prijs</th>
+
+               </tr>
+               <?php 
+                  while($res = mysqli_fetch_array($result)) { 		
+                     echo "<tr>";
+                     echo "<td>".$res['gerecht']."</td>";
+                     echo "<td>".$res['prijs']."</td>";
+	
+                  }
+               ?>
             </table>
          </section>
          <section id="reserveer" class="section section-reserveer">

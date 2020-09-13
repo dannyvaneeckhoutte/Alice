@@ -32,7 +32,7 @@ if(isset($_POST['update']))
 		}		
 	} else {	
 		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE takeaway SET categorie='$categorie',gerecht='$gerecht',prijs='$prijs',actief='$actief' WHERE id=$id");
+		$result = mysqli_query($mysqli, "UPDATE gerechten SET categorie='$categorie',gerecht='$gerecht',prijs='$prijs',actief='$actief' WHERE id=$id");
 		
 		//redirectig to the display page. In our case, it is admin.php
 		header("Location: admin.php");
@@ -44,7 +44,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM takeaway WHERE id=$id");
+$result = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE id=$id");
 
 while($res = mysqli_fetch_array($result))
 {

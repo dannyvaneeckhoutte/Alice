@@ -8,8 +8,8 @@ include_once("config.php");
 if(isset($_POST['Submit'])) {	
 	$categorie = mysqli_real_escape_string($mysqli, $_POST['categorie']);
 	$gerecht = mysqli_real_escape_string($mysqli, $_POST['gerecht']);
-  $prijs = mysqli_real_escape_string($mysqli, $_POST['prijs']);
-  $actief = mysqli_real_escape_string($mysqli, $_POST['actief']);
+   $prijs = mysqli_real_escape_string($mysqli, $_POST['prijs']);
+   $actief = mysqli_real_escape_string($mysqli, $_POST['actief']);
 
 		
 	// checking empty fields
@@ -37,7 +37,7 @@ if(isset($_POST['Submit'])) {
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database	
-		$result = mysqli_query($mysqli, "INSERT INTO takeaway(categorie, gerecht, prijs, actief) VALUES('$categorie', '$gerecht', '$prijs', '$actief')");
+		$result = mysqli_query($mysqli, "INSERT INTO gerechten(categorie, gerecht, prijs, actief) VALUES('$categorie', '$gerecht', '$prijs', '$actief')");
 		
 		//display success message
 		echo "<font color='green'>Data added successfully.";

@@ -303,15 +303,32 @@ footer {
 // Table
 
 table {
-	margin: 0 auto;
+	margin: 3em auto;
+	table-layout: auto;
 	width: 100%;
 	border-collapse: collapse;
 	td {
+		border-top: 1px dotted $dark;
+		text-align: left;
 		padding: 10px;
-		text-align: right;
-		border-bottom: 1px dotted $medium;
-		&:first-child {
-			text-align: left;
+		&:last-child {
+			text-align: right;
+		}
+
+		&:nth-child(2) {
+			width: 50%;
+		}
+	}
+
+	th {
+		text-align: left;
+		padding: 10px;
+
+		&:last-child {
+			text-align: right;
+		}
+		&:nth-child(2) {
+			width: 50%;
 		}
 	}
 }
