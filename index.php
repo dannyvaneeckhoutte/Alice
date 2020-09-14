@@ -4,11 +4,12 @@ include_once("config.php");
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM gerechten ORDER BY categorie DESC");
-$result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"); // using mysqli_query instead
+$resultLunch = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = 'Lunch' ORDER BY id DESC");
+$resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = 'Zoet' ORDER BY id DESC");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
    <meta charset="UTF-8" />
@@ -151,20 +152,31 @@ $result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"
             </p>
             <br />
             <a href="tel:+32478554804"><strong>0478 55 48 04</strong></a>
-            <br>
-
             <table>
                <tr>
-                  <th>Gerecht</th>
-                  <th>Prijs</th>
+                  <th>Lunch</th>
+                  <th></th>
 
                </tr>
                <?php 
-                  while($res = mysqli_fetch_array($result)) { 		
+                  while($resLunch = mysqli_fetch_array($resultLunch)) {       
                      echo "<tr>";
-                     echo "<td>".$res['gerecht']."</td>";
-                     echo "<td>".$res['prijs']."</td>";
-	
+                     echo "<td>".$resLunch['gerecht']."</td>";
+                     echo "<td>".$resLunch['prijs']."</td>";
+                  }
+               ?>
+            </table>
+            <table>
+               <tr>
+                  <th>Zoet</th>
+                  <th></th>
+
+               </tr>
+               <?php 
+                  while($resZoet = mysqli_fetch_array($resultZoet)) {      
+                     echo "<tr>";
+                     echo "<td>".$resZoet['gerecht']."</td>";
+                     echo "<td>".$resZoet['prijs']."</td>";
                   }
                ?>
             </table>
@@ -199,24 +211,23 @@ $result = mysqli_query($mysqli, "SELECT * FROM gerechten ORDER BY categorie ASC"
          </div>
 
          <div class="info">
-            <div class="adres">
+            <div class="adres flex-col">
                <address>
                   <strong>De Wereld van Alice</strong>
-                  <br />Kerstraat 1 <br />1785 Merchtem <br />
-                  <a href="mailto:info@dewereldvanalice.be">
-                     info@dewereldvanalice.be
-                  </a>
-                  <br />
-                  <a href="tel:+32478554804"> Tel: 0478 55 48 04 </a>
-                  </p>
+                  <br>Kerstraat 1
+                  <br>1785 Merchtem
+                  <br><a href="mailto:info@dewereldvanalice.be">info@dewereldvanalice.be</a>
+                  <br><a href="tel:+32478554804"> Tel: 0478 55 48 04 </a>
+               </address>
             </div>
-            <br />
-            <div class="openingsuren">
+            <div class="openingsuren flex-col">
                <p>
-                  <strong>Openingsuren</strong>
-                  <br />woensdag van 9 tot 17u <br />donderdag van 12 tot 23u
-                  <br />vrijdag van 9 tot 17u <br />zaterdag van 9 tot 17u
-                  </address>
+                  <strong>Alice is open op</strong>
+                  <br>woensdag van <time datetime="09:00">9:00</time> tot <time datetime="17:00">17:00</time>
+                  <br>donderdag van <time datetime="12:00">12:00</time> tot <time datetime="23:00">23:00</time>
+                  <br>vrijdag van <time datetime="09:00">9:00</time> tot <time datetime="17:00">17:00</time>
+                  <br>zaterdag van <time datetime="09:00">9:00</time> tot <time datetime="17:00">17:00</time>
+               </p>
             </div>
          </div>
          <div class="social">

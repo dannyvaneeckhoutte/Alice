@@ -50,8 +50,8 @@ while($res = mysqli_fetch_array($result))
 {
 	$categorie = $res['categorie'];
 	$gerecht = $res['gerecht'];
-  $prijs = $res['prijs'];
-  $actief = $res['actief'];
+   $prijs = $res['prijs'];
+   $actief = $res['actief'];
 }
 ?>
 <?php include ("includes/header.php") ?>
@@ -61,22 +61,23 @@ while($res = mysqli_fetch_array($result))
 
 <form name="form1" method="post" action="edit.php">
    <label for="categorie">Categorie</label>
-   <input type="text" name="categorie" />
+   <input type="text" name="categorie" value="<?php echo $categorie;?>" />
    <!-- <select name="categorie" id="categorie">
 							<option value="lunch">Lunch</option>
 							<option value="zoet">Zoet</option>
 						</select> -->
 
    <label for="gerecht">Gerecht</label>
-   <input type="text" name="gerecht" />
+   <input type="text" name="gerecht" value="<?php echo $gerecht;?>" />
 
    <label for="prijs">Prijs</label>
-   <input type="text" name="prijs" />
+   <input type="text" name="prijs" value="<?php echo $prijs;?>" />
 
-   <label for="actief">Actief?</label>
-   <input type="number" name="actief" value="0" min="0" max="1" />
+   <label for="actief">Actief? <em>1= actief / 0= niet actief</em></label>
+   <input type="number" name="actief" value="<?php echo $actief;?>" min="0" max="1" />
 
-   <input type="submit" name="Submit" value="Aanpassen" />
+   <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+   <input type="submit" name="update" value="Aanpassen" />
 </form>
 
 <?php include ("includes/footer.php") ?>

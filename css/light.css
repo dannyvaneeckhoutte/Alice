@@ -121,7 +121,7 @@ input[name='toggle']:checked + .toggleMenu {
   align-items: center; }
   .card-wrapper .card {
     max-width: 18em;
-    background-color: rgba(127, 185, 191, 0.1);
+    background-color: rgba(127, 185, 191, 0.05);
     margin: 0.6em;
     padding: 0 0 0.3em 0;
     border-radius: 2%; }
@@ -140,10 +140,28 @@ footer {
   background-color: #2c2c2c; }
   footer a {
     color: #7fb9bf; }
-  footer p {
-    color: #fafafa; }
+  footer p,
   footer address {
     color: #fafafa; }
+
+.info {
+  line-height: 1.8em; }
+  @media screen and (min-width: 768px) {
+    .info {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      overflow: hidden; }
+      .info address {
+        text-align: right; }
+      .info .openingsuren {
+        text-align: left; }
+      .info .flex-col {
+        padding: 0.5em 1em 0;
+        flex: 1; } }
+
+address {
+  padding-bottom: 2em; }
 
 .fab {
   color: #fafafa; }
@@ -221,8 +239,14 @@ table {
   table-layout: auto;
   width: 100%;
   border-collapse: collapse; }
+  @media screen and (min-width: 768px) {
+    table {
+      width: 740px; } }
+  table tr {
+    border-top: 1px dotted #716f72; }
+    table tr:first-child {
+      border-top: 0; }
   table td {
-    border-top: 1px dotted #716f72;
     text-align: left;
     padding: 10px; }
     table td:last-child {
@@ -231,7 +255,9 @@ table {
       width: 50%; }
   table th {
     text-align: left;
-    padding: 10px; }
+    padding: 10px;
+    font-weight: 500;
+    color: #c56950; }
     table th:last-child {
       text-align: right; }
     table th:nth-child(2) {
