@@ -1,3 +1,7 @@
 # Alice
+
 ## Website for a coffee shop WIP
-#### http://alice.mindfood.dev/alice/index.php
+
+#### Main Page: http://alice.mindfood.dev/alice/index.php
+
+#### Admin Page: http://alice.mindfood.dev/alice/admin.php
