@@ -200,40 +200,105 @@ address {
   opacity: 0.9;
   top: 0;
   width: 100%;
+  height: 3em;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  box-shadow: 0px 0px 5px #969497; }
-
-.topnav {
-  overflow: hidden;
-  position: relative;
-  min-height: 3em;
-  min-width: 3em; }
-  .topnav #links {
-    padding: 0em 0 1em 1em;
-    display: none;
-    text-align: justify; }
-  .topnav a {
-    color: #716f72;
-    padding-top: 0.8em;
-    text-decoration: none;
-    display: block; }
-    .topnav a:hover {
-      color: #7fb9bf; }
-  .topnav a.icon {
-    display: block;
-    position: absolute;
-    padding: 0;
-    left: 1em;
-    top: 1em; }
+  justify-content: space-between; }
 
 .style-switch {
-  text-align: right;
   position: absolute;
-  right: 1em;
-  top: 1em; }
+  right: 0;
+  top: 25%; }
 
+.visible {
+  display: none; }
+
+.navbar-menu {
+  background-color: #fafafa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  transform: translateX(-100%);
+  transition: 0.5s; }
+  .navbar-menu .menu-listing {
+    padding: 0;
+    margin: 0;
+    text-align: right; }
+
+.navbar-menu.active {
+  transform: translateX(0);
+  transition: 0.5s; }
+
+.menu-listing li {
+  display: inline-block; }
+  .menu-listing li a {
+    display: block;
+    line-height: 3em;
+    padding: 0 20px;
+    transition: 0.5s; }
+    .menu-listing li a:hover {
+      background-color: #262626;
+      text-decoration: none;
+      transition: 0.3s; }
+
+.menu {
+  text-align: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 9999; }
+  .menu span {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background-color: #716f72;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s; }
+    .menu span:before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      background-color: #716f72;
+      height: 3px;
+      width: 25px;
+      transition: 0.3s; }
+    .menu span:after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      background-color: #716f72;
+      height: 3px;
+      width: 25px;
+      transition: 0.3s; }
+
+.menu.active span {
+  background-color: transparent; }
+  .menu.active span:before {
+    background-color: #c56950;
+    transform: rotate(45deg);
+    top: 0; }
+  .menu.active span:after {
+    background-color: #c56950;
+    transform: rotate(-45deg);
+    top: 0; }
+
+@media only screen and (max-width: 767px) {
+  .navbar-menu {
+    height: auto;
+    z-index: 1; }
+    .navbar-menu .menu-listing {
+      text-align: center; }
+
+  .menu-listing li {
+    display: block; } }
 table {
   margin: 3em auto;
   table-layout: auto;

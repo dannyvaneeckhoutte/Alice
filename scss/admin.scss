@@ -12,18 +12,11 @@ body {
 	max-width: 960px;
 	margin: 0 auto;
 }
-h1,
-h1,
-h3,
-h4,
-h5,
-h6 {
-	color: $white;
-}
+
 a {
 	text-align: left;
 	font-weight: 500;
-	color: $blue-dark;
+	color: $blue-med-dark;
 	&:hover {
 		color: $white;
 		text-decoration: underline;

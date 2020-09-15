@@ -13,3 +13,7 @@
 </head>
 
 <body>
+   <br>
+   <a href="index.php"><img src="./img/logo-A.svg" alt="Logo Alice" width="150px" height="150px"></a>
+
+   <br>

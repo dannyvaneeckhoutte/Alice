@@ -22,42 +22,32 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
    <link rel="manifest" href="/site.webmanifest">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet" />
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
    <script src="https://kit.fontawesome.com/7b2dc1503a.js" crossorigin="anonymous"></script>
    <!-- <link rel="stylesheet" href="css/swiper-bundle.css" /> -->
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/reset.css" />
    <link rel="stylesheet" href="css/light.css" id="theme" />
-   <link rel="stylesheet" href="css/hamburgers.css" />
-
    <title>De Wereld van Alice - home</title>
 </head>
 
 <body>
    <div class="main-wrapper">
       <div class="nav-container">
-         <nav class="topnav">
-            <!-- Animated hamburger icon (hamburger.css) -->
-            <button class="hamburger hamburger--boring" type="button" aria-label="Menu" aria-controls="navigation">
-               <a href="javascript:void(0);" class="icon" onclick="showMenu()">
-                  <span class="hamburger-box">
-                     <span class="hamburger-inner is-active"></span>
-                  </span>
-               </a>
-            </button>
-
-            <a href="#"></a>
-            <div id="links">
-               <a onclick="closeMenu()" href="index.php">Home</a>
-               <a onclick="closeMenu()" href="#sfeer">Sfeer</a>
-               <a onclick="closeMenu()" href="#events">Do</a>
-               <a onclick="closeMenu()" href="#takeaway">Takeaway</a>
-               <a onclick="closeMenu()" href="menu.html">Menu</a>
-               <a onclick="closeMenu()" href="#shop">Shop</a>
-               <a onclick="closeMenu()" href="#contact">Contact</a>
-               <br>
-               <a style="color:red;" onclick="closeMenu()" href="admin.php">Admin</a>
-
-            </div>
+         <!-- Hamburger Menu Icon -->
+         <div class="menu">
+            <span></span>
+         </div>
+         <nav class="navbar-menu">
+            <ul class="menu-listing">
+               <li><a class="menu-link" href="index.php">Home</a></li>
+               <li><a class="menu-link" href="#sfeer">Sfeer</a></li>
+               <li><a class="menu-link" href="#events">Do</a></li>
+               <li><a class="menu-link" href="#takeaway">Takeaway</a></li>
+               <li><a class="menu-link" href="menu.html">Menu</a></li>
+               <li><a class="menu-link" href="#shop">Shop</a></li>
+               <li><a class="menu-link" href="#contact">Contact</a></li>
+            </ul>
          </nav>
 
          <!-- Theme switcher -->
@@ -146,9 +136,8 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
          <section id="takeaway" class="section section-takeaway">
             <h1>Takeaway</h1>
             <p>
-               Hieronder vind je het takeaway menu voor deze week terug. <br />
-               Bestellen kan via onderstaand formulier, of telefonisch voor
-               woensdag of zaterdag 14u op het nummer:
+               Hieronder vind je het takeaway menu voor deze week terug. Bestellen kan telefonisch, voor 14u op woensdag
+               of zaterdag, op het nummer:
             </p>
             <br />
             <a href="tel:+32478554804"><strong>0478 55 48 04</strong></a>
@@ -162,7 +151,7 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
                   while($resLunch = mysqli_fetch_array($resultLunch)) {       
                      echo "<tr>";
                      echo "<td>".$resLunch['gerecht']."</td>";
-                     echo "<td>".$resLunch['prijs']."</td>";
+                     echo "<td>€".$resLunch['prijs']."</td>";
                   }
                ?>
             </table>
@@ -176,7 +165,7 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
                   while($resZoet = mysqli_fetch_array($resultZoet)) {      
                      echo "<tr>";
                      echo "<td>".$resZoet['gerecht']."</td>";
-                     echo "<td>".$resZoet['prijs']."</td>";
+                     echo "<td>€".$resZoet['prijs']."</td>";
                   }
                ?>
             </table>

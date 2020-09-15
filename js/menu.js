@@ -1,28 +1,7 @@
-// animate hamburger menu
-// Look for .hamburger
-var hamburger = document.querySelector('.hamburger');
-// On click
-hamburger.addEventListener('click', function () {
-	// Toggle class "is-active"
-	hamburger.classList.toggle('is-active');
-	// Do something else, like open/close menu
+// Hamburger menu
+// open/close menu on hamburger and link click
+$('.menu, .menu-link').click(function () {
+	$('.menu').toggleClass('active');
+	$('.navbar-menu').toggleClass('active');
+	$('.style-switch').toggleClass('visible');
 });
-
-// Show/hide menu
-function showMenu() {
-	var x = document.getElementById('links');
-	if (x.style.display === 'block') {
-		x.style.display = 'none';
-	} else {
-		x.style.display = 'block';
-	}
-}
-
-function closeMenu() {
-	var x = document.getElementById('links');
-	if (x.style.display === 'none') {
-		x.style.display = 'block';
-	} else {
-		x.style.display = 'none';
-	}
-}
