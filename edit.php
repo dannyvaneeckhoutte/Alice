@@ -1,83 +1,70 @@
 <?php
-// including the database connection file
-include_once("config.php");
+require 'db.php';
 
-if(isset($_POST['update']))
-{	
-
-	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
-	$categorie = mysqli_real_escape_string($mysqli, $_POST['categorie']);
-	$gerecht = mysqli_real_escape_string($mysqli, $_POST['gerecht']);
-  $prijs = mysqli_real_escape_string($mysqli, $_POST['prijs']);
-  $actief = mysqli_real_escape_string($mysqli, $_POST['actief']);	
-	
-	
-	// checking empty fields
-	if(empty($categorie) || empty($gerecht) || is_null($prijs) || is_null($actief)) {	
-			
-		if(empty($categorie)) {
-			echo "<font color='red'>Categorie veld is leeg.</font><br/>";
-		}
-		
-		if(empty($gerecht)) {
-			echo "<font color='red'>Gerecht veld is leeg.</font><br/>";
-    }
-    
-    if(is_null($prijs)) {
-			echo "<font color='red'>Prijs veld is leeg.</font><br/>";
-		}
-		
-		if(is_null($actief)) {
-			echo "<font color='red'>Actief veld is leeg.</font><br/>";
-		}		
-	} else {	
-		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE gerechten SET categorie='$categorie',gerecht='$gerecht',prijs='$prijs',actief='$actief' WHERE id=$id");
-		
-		//redirectig to the display page. In our case, it is admin.php
-		header("Location: admin.php");
-	}
-}
-?>
-<?php
-//getting id from url
 $id = $_GET['id'];
+$sql = 'SELECT * FROM gerechten WHERE id=:id';
+$statement = $connection->prepare($sql);
+$statement->execute([':id' => $id ]);
+$gerechten = $statement->fetch(PDO::FETCH_OBJ);
 
-//selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE id=$id");
+if (isset ($_POST['categorie'])  && isset($_POST['gerecht'])  && isset($_POST['prijs'])  && isset($_POST['actief']) ) {
+  $categorie = $_POST['categorie'];
+  $gerecht = $_POST['gerecht'];
+  $prijs = $_POST['prijs'];
+  $actief = $_POST['actief'];
 
-while($res = mysqli_fetch_array($result))
-{
-	$categorie = $res['categorie'];
-	$gerecht = $res['gerecht'];
-   $prijs = $res['prijs'];
-   $actief = $res['actief'];
+  $sql = 'UPDATE gerechten SET categorie=:categorie, gerecht=:gerecht, prijs=:prijs, actief=:actief WHERE id=:id';
+  $statement = $connection->prepare($sql);
+  if ($statement->execute([':categorie' => $categorie, ':gerecht' => $gerecht, ':prijs' => $prijs, ':actief' => $actief, ':id' => $id])) {
+    header("Location: admin.php");
+  }
 }
-?>
-<?php include ("includes/header.php") ?>
 
-<a href="admin.php">Terug naar overzicht</a>
-<br /><br />
+ ?>
+<?php require 'includes/header.php'; ?>
+<div class="container">
+  <div class="card mt-5 mx-auto" style="width: 40rem;">
+    <div class="card-header">
+      <h2>Gerecht aanpassen</h2>
+    </div>
+    <div class="card-body">
+      <?php if(!empty($message)): ?>
+      <div class="alert alert-success">
+        <?= $message; ?>
+      </div>
+      <?php endif; ?>
+      <form method="post">
+        <div class="from-group">
+          <label for="categorie">Categorie</label>
+          <br>
+          <select name="categorie" id="categorie" class="mb-3">
+            <option value="lunch">Lunch</option>
+            <option value="zoet">Zoet</option>
+          </select>
 
-<form name="form1" method="post" action="edit.php">
-   <label for="categorie">Categorie</label>
-   <input type="text" name="categorie" value="<?php echo $categorie;?>" />
-   <!-- <select name="categorie" id="categorie">
-							<option value="lunch">Lunch</option>
-							<option value="zoet">Zoet</option>
-						</select> -->
-
-   <label for="gerecht">Gerecht</label>
-   <input type="text" name="gerecht" value="<?php echo $gerecht;?>" />
-
-   <label for="prijs">Prijs</label>
-   <input type="text" name="prijs" value="<?php echo $prijs;?>" />
-
-   <label for="actief">Actief? <em>1= actief / 0= niet actief</em></label>
-   <input type="number" name="actief" value="<?php echo $actief;?>" min="0" max="1" />
-
-   <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
-   <input type="submit" name="update" value="Aanpassen" />
-</form>
-
-<?php include ("includes/footer.php") ?>
+        </div>
+        <div class="form-group">
+          <label for="gerecht">Gerecht</label>
+          <input value="<?= $gerechten->gerecht; ?>" type="text" name="gerecht" id="gerecht" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="prijs">Prijs</label>
+          <input type="prijs" value="<?= $gerechten->prijs; ?>" name="prijs" id="prijs" class="form-control">
+        </div>
+        <div class="form-group">
+          <fieldset>
+            <legend>Actief?</em></legend>
+            <input type="radio" name="actief" value="1" checked />
+            <label for="actief">Ja</label>
+            <input type="radio" name="actief" value="0" />
+            <label for="actief">Nee</label>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-info">Gerecht aanppassen</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<?php require 'includes/footer.php'; ?>

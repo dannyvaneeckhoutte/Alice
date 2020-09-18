@@ -81,10 +81,20 @@ form {
 	flex-direction: column;
 	margin: 3em auto;
 	padding: 0 1em;
-	max-width: 500px;
+	max-width: 450px;
 	label {
-		// width: 30%;
 		text-align: left;
+		font-weight: 500;
+		padding-left: 0.5em;
+	}
+}
+
+fieldset {
+	border: none;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0.5em;
+	& legend {
 		font-weight: 500;
 	}
 }

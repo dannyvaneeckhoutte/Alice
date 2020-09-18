@@ -1,13 +1,8 @@
 <?php
-//including the database connection file
-include("config.php");
-
-//getting id of the data from url
+require 'db.php';
 $id = $_GET['id'];
-
-//deleting the row from table
-$result = mysqli_query($mysqli, "DELETE FROM gerechten WHERE id=$id");
-
-//redirecting to the display page (admin.php in our case)
-header("Location:admin.php");
-?>
+$sql = 'DELETE FROM gerechten WHERE id=:id';
+$statement = $connection->prepare($sql);
+if ($statement->execute([':id' => $id])) {
+  header("Location: admin.php");
+}

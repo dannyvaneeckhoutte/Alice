@@ -9,7 +9,7 @@ $yellow: #eccb83;
 $purple: #a594bd;
 $indigo: #9e83c7;
 $blue: #7fb9bf;
-$blue-op-01: rgba(127, 185, 191, 0.05);
+$blue-op-01: rgba(127, 185, 191, 0.1);
 $dark-op-01: rgba(113, 111, 114, 0.1);
 $facebook: #1778f2;
 $instagram: #de3964;
@@ -44,12 +44,12 @@ a {
 	}
 }
 // fix for overshooting link to ID
-:target:before {
-	content: '';
-	display: block;
-	height: 3em;
-	margin: -3em 0 0;
-}
+// :target:before {
+// 	content: '';
+// 	display: block;
+// 	height: 3em;
+// 	margin: -3em 0 0;
+// }
 
 .main-wrapper {
 	padding-top: 5em;
@@ -135,7 +135,6 @@ input[name='toggle'] {
 .fa-hamburger {
 	color: $orange;
 	&:hover {
-		text-shadow: 0px 0px 3px $orange;
 		cursor: pointer;
 		color: darken($orange, 10%);
 	}
@@ -143,7 +142,6 @@ input[name='toggle'] {
 .fa-glass-martini-alt {
 	color: $blue;
 	&:hover {
-		text-shadow: 0px 0px 3px $blue;
 		cursor: pointer;
 		color: darken($blue, 10%);
 	}
@@ -184,14 +182,14 @@ input[name='toggle'] {
 	align-items: center;
 	& .card {
 		max-width: 18em;
-		background-color: $blue-op-01;
+		background-color: $dark-op-01;
 		margin: 0.6em;
 		padding: 0 0 0.3em 0;
 		border-radius: 2%;
 		& img {
 			border-bottom: 0.3em solid $blue;
 		}
-		& h3 {
+		& h4 {
 			color: $blue;
 		}
 	}
@@ -366,9 +364,7 @@ address {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		transition: 0.3s;
-		&:hover {
-			background-color: $white;
-		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -377,9 +373,6 @@ address {
 			height: 3px;
 			width: 25px;
 			transition: 0.3s;
-			&:hover {
-				background-color: $white;
-			}
 		}
 		&:after {
 			content: '';
@@ -389,9 +382,6 @@ address {
 			height: 3px;
 			width: 25px;
 			transition: 0.3s;
-			&:hover {
-				background-color: $white;
-			}
 		}
 	}
 }

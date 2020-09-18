@@ -1,11 +1,7 @@
-<?php
-//including the database connection file
-include_once("config.php");
+<?php 
+// maak verbinding met database
+require 'db.php';
 
-//fetching data in descending order (lastest entry first)
-//$result = mysql_query("SELECT * FROM gerechten ORDER BY categorie DESC");
-$resultLunch = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = 'Lunch' ORDER BY id DESC");
-$resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = 'Zoet' ORDER BY id DESC");
 ?>
 
 <!DOCTYPE html>
@@ -61,10 +57,8 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
       <div class="section-wrapper">
          <section id="home" class="section section-intro">
             <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
-               repellendus voluptates earum dolor, culpa, aut esse sunt aspernatur
-               veritatis iusto, id alias praesentium. Dicta quaerat modi reiciendis
-               consequuntur. Explicabo, et.
+               Alice heeft vele kamers. Ontbijten, lunchen en koffie drinken doe je in de living. In onze winkel
+               verkopen we hebbedingen voor je interieur. Welkom bij Alice!
             </p>
          </section>
          <section id="sfeer" class="section section-sfeer swiper-container">
@@ -95,41 +89,45 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
                nostrum, perferendis voluptatibus quae.
             </p>
             <div class="card-wrapper">
-               <div class="card">
+               <div class="card card-do">
                   <img src="img/cafe.jpg" alt="cafe event" />
                   <div class="card-txt">
-                     <h3>Cafe Alice</h3>
+                     <h4>Cafe Alice</h4>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Mollitia iste consectetur, illum exercitationem et magni hic?
-                        Laudantium earum, maiores unde in neque consequuntur! Impedit
-                        nobis animi optio commodi necessitatibus nihil!
+                        In café Alice kan je terecht voor lekkere drankjes, goeie biertjes, heerlijke cocktails en véél
+                        sfeer. Want donderdagavond is ook al een beetje weekend!
+                        Have a drink with us!
                      </p>
                   </div>
+
                </div>
-               <div class="card">
+               <div class="card card-do">
                   <img src="img/wunder.jpg" alt="cafe event" />
                   <div class="card-txt">
-                     <h3>Cafe Alice</h3>
+                     <h4>Wünderground</h4>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Mollitia iste consectetur, illum exercitationem et magni hic?
-                        Laudantium earum, maiores unde in neque consequuntur! Impedit
-                        nobis animi optio commodi necessitatibus nihil!
+                        Eén vrijdag per maand verandert Alice vanaf 18u in WÜNDERGROUND.
+                        Op de menumuur: cocktails, mocktails & iets maagvullends waar je gegarandeerd je vingers bij
+                        aflikt. Ergens tussen de achter- en voorgrond spelen dj's of een band muziek uit wünderground.
                      </p>
                   </div>
+                  <a href="https://www.facebook.com/De-Wereld-van-Alice-761543060570041/events/?ref=page_internal"
+                     class="btn-card">Bekijk onze events</a>
+
                </div>
-               <div class="card">
+               <div class="card card-do">
                   <img src="img/kermis.jpg" alt="cafe event" />
                   <div class="card-txt">
-                     <h3>Cafe Alice</h3>
+                     <h4>Kermis @ Alice</h4>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Mollitia iste consectetur, illum exercitationem et magni hic?
-                        Laudantium earum, maiores unde in neque consequuntur! Impedit
-                        nobis animi optio commodi necessitatibus nihil!
+                        Het is weer zo ver! 10 dagen feest!
+                        Tijdens de kermis serveren wij jullie elke dag spaghetti, kaas- en garnaalkroketten, kibbeling
+                        en fingerfood tot 22h.
+                        Onze beroemde cocktailbar is elke dag open!
                      </p>
+
                   </div>
+
                </div>
             </div>
          </section>
@@ -141,55 +139,106 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
             </p>
             <br />
             <a href="tel:+32478554804"><strong>0478 55 48 04</strong></a>
+
             <table>
                <tr>
-                  <th>Lunch</th>
-                  <th></th>
-
+                  <th>Gerecht</th>
+                  <th>Prijs</th>
                </tr>
-               <?php 
-                  while($resLunch = mysqli_fetch_array($resultLunch)) {       
-                     echo "<tr>";
-                     echo "<td>".$resLunch['gerecht']."</td>";
-                     echo "<td>€".$resLunch['prijs']."</td>";
-                  }
-               ?>
+
+               <?php     
+    // selecteer alles in de database
+    $sql = 'SELECT * FROM gerechten WHERE categorie = "Lunch"';
+    $statement = $connection->prepare($sql);
+    $statement->execute();
+    $gerechtenLunch = $statement->fetchAll(PDO::FETCH_OBJ);
+    
+    foreach($gerechtenLunch as $lunch): 
+    
+    ?>
+               <tr>
+                  <td><?= $lunch->gerecht; ?></td>
+                  <td><?= $lunch->prijs; ?></td>
+               </tr>
+               <?php endforeach; ?>
+
             </table>
+
             <table>
                <tr>
-                  <th>Zoet</th>
-                  <th></th>
-
+                  <th>Gerecht</th>
+                  <th>Prijs</th>
                </tr>
-               <?php 
-                  while($resZoet = mysqli_fetch_array($resultZoet)) {      
-                     echo "<tr>";
-                     echo "<td>".$resZoet['gerecht']."</td>";
-                     echo "<td>€".$resZoet['prijs']."</td>";
-                  }
-               ?>
+
+               <?php     
+    // selecteer alles in de database
+    $sql = 'SELECT * FROM gerechten WHERE categorie = "Zoet"';
+    $statement = $connection->prepare($sql);
+    $statement->execute();
+    $gerechtenZoet = $statement->fetchAll(PDO::FETCH_OBJ);
+    
+    foreach($gerechtenZoet as $zoet): 
+    
+    ?>
+               <tr>
+                  <td><?= $zoet->gerecht; ?></td>
+                  <td><?= $zoet->prijs; ?></td>
+               </tr>
+               <?php endforeach; ?>
+
             </table>
          </section>
          <section id="reserveer" class="section section-reserveer">
             <h1>Reserveer</h1>
-            <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-               alias ea labore? Nesciunt, delectus veritatis! Suscipit enim animi
-               minus ad odio odit, ratione quidem voluptates repudiandae excepturi
-               sequi pariatur esse.
-            </p>
             <p>Een tafel reserveren kan op het nummer:</p>
             <br />
             <a href="tel:+32478554804"><strong>0478 55 48 04</strong></a>
          </section>
          <section id="shop" class="section section-shop">
             <h1>Shop</h1>
-            <p>
-               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-               alias ea labore? Nesciunt, delectus veritatis! Suscipit enim animi
-               minus ad odio odit, ratione quidem voluptates repudiandae excepturi
-               sequi pariatur esse.
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quo facilis optio ipsum natus
+               exercitationem amet autem in officiis ea, pariatur at vel asperiores, blanditiis fuga, tempore rem?
+               Commodi, unde?
             </p>
+            <div class="card-wrapper">
+               <div class="card card-shop">
+                  <img src="img/thee.jpg" alt="cafe event" />
+                  <div class="card-txt">
+                     <h4>Kusmi thee</h4>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab illum nam incidunt pariatur
+                        explicabo libero ipsum expedita distinctio culpa est cupiditate quasi natus provident placeat,
+                        sed suscipit nobis a aspernatur?
+                     </p>
+                  </div>
+               </div>
+
+               <div class="card card-shop">
+                  <img src="img/keramiek.jpg" alt="cafe event" />
+                  <div class="card-txt">
+                     <h4>HK Living</h4>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat a, facilis explicabo id
+                        officiis, sed dolores hic ea tempora vitae eaque soluta asperiores consectetur perferendis
+                        perspiciatis libero dolor similique reiciendis!
+
+                     </p>
+
+                  </div>
+                  <a href="#" class="btn-card">Bezoek onze webshop</a>
+               </div>
+
+               <div class="card card-shop">
+                  <img src="img/gimber.jpg" alt="cafe event" />
+                  <div class="card-txt">
+                     <h4>Gimber</h4>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quae est omnis unde eum
+                        labore eius maxime non, deleniti reiciendis nemo ex quam temporibus sequi eos molestiae
+                        blanditiis, obcaecati nihil.
+                     </p>
+
+                  </div>
+
+               </div>
+            </div>
          </section>
       </div>
       <footer class="footer" id="contact">
@@ -220,11 +269,13 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
             </div>
          </div>
          <div class="social">
-            <a href="https://www.facebook.com/761543060570041"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a href="https://www.instagram.com/wereldvanalice/"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a href="https://www.facebook.com/761543060570041" rel="noopener" target="_blank"><i
+                  class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="https://www.instagram.com/wereldvanalice/" rel="noopener" target="_blank"><i
+                  class="fab fa-instagram-square fa-2x"></i></a>
          </div>
          <p class="copyright">
-            code & design &copy; &nbsp;<a href="https://github.com/dannyvaneeckhoutte" target="_blank">
+            code & design &copy; &nbsp;<a href="https://github.com/dannyvaneeckhoutte" target="_blank" rel="noopener">
                Danny Van Eeckhoutte</a>
          </p>
       </footer>
@@ -239,6 +290,12 @@ $resultZoet = mysqli_query($mysqli, "SELECT * FROM gerechten WHERE categorie = '
    <!-- image slider -->
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/swiper.js"></script>
+
+   <script>
+   document.addEventListener('touchstart', onTouchStart, {
+      passive: true
+   });
+   </script>
 </body>
 
 </html>
