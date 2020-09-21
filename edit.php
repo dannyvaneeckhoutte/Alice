@@ -20,8 +20,23 @@ if (isset ($_POST['categorie'])  && isset($_POST['gerecht'])  && isset($_POST['p
   }
 }
 
- ?>
+?>
+
 <?php require 'includes/header.php'; ?>
+
+<?php 
+   session_start();
+   if(isset($_SESSION['sessie_gebr_id']) && $_SESSION['sessie_gebr_id'] != "") {
+      echo '<div class="logout-wrapper" style="position:relative; text-align:right; padding: 0.5em">';
+      echo '<h4>Welcome '.$_SESSION['sessie_gebruiker'].'</h4>';
+      echo '<a style="color: white"href="logout.php">Logout</a>';
+      echo '</div>';
+
+      } else { 
+         header("Refresh:1; url=login.php");
+      }
+?>
+
 <div class="container">
    <div class="card mt-5 mx-auto" style="width: 40rem;">
       <div class="card-header">

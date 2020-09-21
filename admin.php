@@ -1,6 +1,19 @@
 <?php require 'db.php'; ?>
 <?php require 'includes/header.php'; ?>
 
+<?php 
+   session_start();
+   if(isset($_SESSION['sessie_gebr_id']) && $_SESSION['sessie_gebr_id'] != "") {
+      echo '<div class="logout-wrapper" style="position:relative; text-align:right; padding: 0.5em">';
+      echo '<h4>Welcome '.$_SESSION['sessie_gebruiker'].'</h4>';
+      echo '<a style="color: white"href="logout.php">Logout</a>';
+      echo '</div>';
+
+      } else { 
+      header('location:login.php');
+      }
+?>
+
 <div class="container">
    <div class="card mt-5">
       <div class="card-header">

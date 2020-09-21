@@ -7,5 +7,5 @@ try {
 $connection = new PDO($dsn, $username, $password);
 } catch(PDOException $e) {
    echo $e->getMessage();
-   die("ERROR: " . $e->getMessage());
+   die("Verbinding mislukt: " . $e->getMessage());
 }
