@@ -70,7 +70,7 @@
                </div>
                <div class="form-group">
                   <input type="submit" name="btnLogin" id="btnLogin" class="btn btn-primary" value="Aanmelden" />
-                  <h6 class="loginMsg pt-2 text-danger"><?= $message;?></h6>
+                  <h6 class="pt-2 text-danger"><?= $message;?></h6>
                </div>
             </form>
          </div>

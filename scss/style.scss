@@ -20,9 +20,44 @@ $font-main: 'Roboto', sans-serif;
 
 body {
 	font-family: $font-main;
-	background-color: $white;
+	background: $white;
 	color: $dark;
 	text-align: center;
+}
+
+/* Light mode */
+// @media (prefers-color-scheme: light) {
+// 	body {
+// 		background: $white;
+// 		color: $black;
+// 	}
+// }
+
+/* Dark mode */
+// @media (prefers-color-scheme: dark) {
+// 	body {
+// 		background: $black;
+// 		color: $white;
+// 		& .nav-container,
+// 		.navbar-menu {
+// 			background: $black;
+// 		}
+// 		& ul > li > a:hover {
+// 			background-color: $dark;
+// 		}
+// 	}
+// }
+
+.dark-mode {
+	background: $black;
+	color: $white;
+	& .nav-container,
+	.navbar-menu {
+		background: $black;
+	}
+	& ul > li > a:hover {
+		background-color: $dark;
+	}
 }
 
 h1,
@@ -47,6 +82,7 @@ a {
 		color: $white;
 	}
 }
+
 // fix for overshooting link to ID
 // Problem when linking to map, margin on top
 // :target:before {

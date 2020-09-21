@@ -64,7 +64,8 @@ if (isset ($_POST['categorie'])  && isset($_POST['gerecht'])  && isset($_POST['p
             </div>
             <div class="form-group">
                <label for="prijs">Prijs</label>
-               <input type="prijs" value="<?= $gerechten->prijs; ?>" name="prijs" id="prijs" class="form-control">
+               <input type="number" value="<?= $gerechten->prijs; ?>" name="prijs" id="prijs" class="form-control"
+                  min="0" max="99">
             </div>
             <div class="form-group">
                <fieldset>

@@ -1,8 +1,19 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #fafafa;
+  background: #fafafa;
   color: #716f72;
   text-align: center; }
+
+/* Light mode */
+/* Dark mode */
+.dark-mode {
+  background: #2c2c2c;
+  color: #fafafa; }
+  .dark-mode .nav-container,
+  .dark-mode .navbar-menu {
+    background: #2c2c2c; }
+  .dark-mode ul > li > a:hover {
+    background-color: #716f72; }
 
 h1,
 h2,

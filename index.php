@@ -23,7 +23,7 @@ require 'db.php';
    <!-- <link rel="stylesheet" href="css/swiper-bundle.css" /> -->
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/reset.css" />
-   <link rel="stylesheet" href="css/light.css" id="theme" />
+   <link rel="stylesheet" href="css/style.css" id="theme" />
    <title>De Wereld van Alice - home</title>
 </head>
 
@@ -47,13 +47,15 @@ require 'db.php';
          </nav>
 
          <!-- Theme switcher -->
-         <a href="#" class="style-switch" onclick="switchSheet()">
+         <a href="#" class="style-switch">
             <i class="fas fa-lightbulb fa-lg"></i>
          </a>
       </div>
+
       <header>
          <img src="img/logo-txt.svg" alt="Alice logo" class="main-logo" />
       </header>
+
       <div class="section-wrapper">
          <section id="home" class="section section-intro">
             <p>
@@ -112,7 +114,7 @@ require 'db.php';
                      </p>
                   </div>
                   <a href="https://www.facebook.com/De-Wereld-van-Alice-761543060570041/events/?ref=page_internal"
-                     class="btn-card">Bekijk onze events</a>
+                     class="btn-card">Bekijk al onze events</a>
 
                </div>
                <div class="card card-do">
@@ -288,17 +290,12 @@ require 'db.php';
    <script src="js/menu.js"></script>
 
    <!-- Theme switcher -->
-   <script src="js/switch.js"></script>
+   <!-- <script src="js/switch.js"></script> -->
 
    <!-- image slider -->
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/swiper.js"></script>
 
-   <script>
-   document.addEventListener('touchstart', onTouchStart, {
-      passive: true
-   });
-   </script>
 </body>
 
 </html>
