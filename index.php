@@ -142,8 +142,8 @@ require 'db.php';
 
             <table>
                <tr>
-                  <th>Gerecht</th>
-                  <th>Prijs</th>
+                  <th>Lunch</th>
+                  <th></th>
                </tr>
 
                <?php     
@@ -152,10 +152,9 @@ require 'db.php';
     $statement = $connection->prepare($sql);
     $statement->execute();
     $gerechtenLunch = $statement->fetchAll(PDO::FETCH_OBJ);
-    
-    foreach($gerechtenLunch as $lunch): 
-    
+
     ?>
+               <?php foreach($gerechtenLunch as $lunch): ?>
                <tr>
                   <td><?= $lunch->gerecht; ?></td>
                   <td><?= $lunch->prijs; ?></td>
@@ -166,8 +165,8 @@ require 'db.php';
 
             <table>
                <tr>
-                  <th>Gerecht</th>
-                  <th>Prijs</th>
+                  <th>Zoet</th>
+                  <th></th>
                </tr>
 
                <?php     
@@ -274,6 +273,10 @@ require 'db.php';
             <a href="https://www.instagram.com/wereldvanalice/" rel="noopener" target="_blank"><i
                   class="fab fa-instagram-square fa-2x"></i></a>
          </div>
+         <p class="admin">
+            <a href="admin.php" target="_blank" rel="noopener">
+               Admin</a>
+         </p>
          <p class="copyright">
             code & design &copy; &nbsp;<a href="https://github.com/dannyvaneeckhoutte" target="_blank" rel="noopener">
                Danny Van Eeckhoutte</a>

@@ -7,10 +7,12 @@ $red: #c56950;
 $orange: #d99e87;
 $yellow: #eccb83;
 $purple: #a594bd;
-$indigo: #9e83c7;
+$indigo: #9776c7;
 $blue: #7fb9bf;
 $blue-op-01: rgba(127, 185, 191, 0.1);
 $dark-op-01: rgba(113, 111, 114, 0.1);
+$indigo-op-01: rgba(151, 118, 119, 0.1);
+
 $facebook: #1778f2;
 $instagram: #de3964;
 $swiper-theme-color: #fafafa;
@@ -30,20 +32,24 @@ h3,
 h4,
 h5,
 h6 {
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	margin: 0.6em 0em;
+	color: $red;
 }
 
 a {
+	display: inline-block;
+	padding: 1em;
 	text-decoration: none;
-	color: $white;
-	// display: block;
+	color: $blue;
+	transition: all 0.5s;
 	&:hover {
-		color: $medium;
-		text-decoration: underline;
+		background-color: $black;
+		color: $white;
 	}
 }
 // fix for overshooting link to ID
+// Problem when linking to map, margin on top
 // :target:before {
 // 	content: '';
 // 	display: block;
@@ -67,32 +73,6 @@ header {
 	& p {
 		max-width: 32em;
 		margin: 0 auto;
-	}
-	& a {
-		&:hover {
-			color: $blue;
-		}
-	}
-
-	&-events {
-		& h1 {
-			color: $blue;
-		}
-	}
-	&-takeaway {
-		& h1 {
-			color: $red;
-		}
-	}
-	&-reserveer {
-		& h1 {
-			color: $red;
-		}
-	}
-	&-shop {
-		& h1 {
-			color: $red;
-		}
 	}
 }
 
@@ -175,28 +155,57 @@ input[name='toggle'] {
 	}
 }
 
+/* Cards */
+
 .card-wrapper {
-	margin: 2em auto;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
+	margin: 1em auto 0;
+	max-width: 90vw;
 	& .card {
-		max-width: 18em;
-		background-color: $dark-op-01;
-		margin: 0.6em;
-		padding: 0 0 0.3em 0;
-		border-radius: 2%;
-		& img {
-			border-bottom: 0.3em solid $blue;
-		}
+		display: flex;
+		flex-direction: column;
+		background-color: $blue-op-01;
+		margin: 1em 0;
+		border-radius: 5px;
 		& h4 {
 			color: $blue;
 		}
-	}
-	& .card-txt {
-		padding: 1em;
+		& p {
+			padding: 1em;
+		}
+		& > img {
+			border-radius: 5px 5px 0 0;
+		}
+
+		& .btn-card {
+			margin-top: auto;
+			background-color: $blue;
+			padding: 0.5em;
+			color: $white;
+			border-radius: 5px;
+			transition: all 0.5s;
+			&:hover {
+				text-decoration: none;
+				background-color: $black;
+				color: $white;
+			}
+			// &:focus {
+			// 	background-color: $white;
+			// 	color: $blue;
+			// }
+			// &:visited {
+			// 	background-color: $black;
+			// 	color: $white;
+			// }
+		}
+		@media screen and (min-width: 768px) {
+			margin: 1em;
+		}
 	}
 	@media screen and (min-width: 768px) {
+		display: flex;
 		flex-direction: row;
 		justify-content: center;
 	}
@@ -205,10 +214,8 @@ input[name='toggle'] {
 footer {
 	background-color: $black;
 	& a {
+		padding: 0;
 		color: $blue;
-		&:hover {
-			color: $white;
-		}
 	}
 	& p,
 	address {
@@ -257,13 +264,6 @@ address {
 	}
 }
 
-.fa-lightbulb {
-	color: $medium;
-	&:hover {
-		color: $white;
-	}
-}
-
 .googleMap {
 	width: 100%;
 	height: 20em;
@@ -303,6 +303,14 @@ address {
 	position: absolute;
 	right: 0;
 	top: 25%;
+	padding: 0;
+	&:hover {
+		color: $black;
+		background: none;
+	}
+}
+.fa-lightbulb {
+	color: $medium;
 }
 .visible {
 	display: none;
@@ -321,7 +329,7 @@ address {
 	.menu-listing {
 		padding: 0;
 		margin: 0;
-		text-align: right;
+		text-align: center;
 	}
 }
 .navbar-menu.active {
@@ -340,7 +348,7 @@ address {
 				background-color: $dark;
 				color: $white;
 				text-decoration: none;
-				transition: 0.3s;
+				transition: 0.5s;
 			}
 		}
 	}

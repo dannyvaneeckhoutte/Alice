@@ -67,7 +67,7 @@
                <td><?= $zoet->actief; ?></td>
                <td>
                   <a href="edit.php?id=<?= $zoet->id ?>" class="btn btn-info">Edit</a>
-                  <a onclick="return confirm('Are you sure you want to delete this entry?')"
+                  <a onclick="return confirm('Wil je dit gerecht echt verwijderen?')"
                      href="delete.php?id=<?= $zoet->id ?>" class='btn btn-danger'>Delete</a>
                </td>
             </tr>

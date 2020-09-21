@@ -8,8 +8,8 @@ $(function () {
 		$('.navbar-menu').toggleClass('active');
 
 		// Hide switch when menu is open
-		$('.style-switch').toggleClass('visible');
-	});
+	// 	$('.style-switch').toggleClass('visible');
+	// });
 
 	// Close menu on scroll
 	$(window).scroll(function () {

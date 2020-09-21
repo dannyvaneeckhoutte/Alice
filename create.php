@@ -10,8 +10,10 @@ if (isset ($_POST['categorie'])  && isset($_POST['gerecht'])  && isset($_POST['p
   $sql = 'INSERT INTO gerechten(categorie, gerecht, prijs, actief) VALUES(:categorie, :gerecht, :prijs, :actief)';
   $statement = $connection->prepare($sql);
   if ($statement->execute([':categorie' => $categorie, ':gerecht' => $gerecht, ':prijs' => $prijs, ':actief' => $actief])) {
-    $message = 'Gerecht succesvol toegevoegd!';
-  }
+      $message = 'Gerecht succesvol toegevoegd!';
+      // Misschien toch op pagina laten?
+      header("Refresh:2; url=admin.php");
+   }
 }
 
 
