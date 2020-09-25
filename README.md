@@ -1,7 +1,5 @@
-# Alice
+# De Wereld van Alice / Thesis project
 
-## Website for a coffee shop WIP
+## Website for a coffee shop
 
-#### Main Page: http://alice.mindfood.dev/alice/index.php
-
-#### Admin Page: http://alice.mindfood.dev/alice/admin.php
+#### Main Page: http://alice.mindfood.dev/alice
