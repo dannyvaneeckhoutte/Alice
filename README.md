@@ -1,7 +1,9 @@
-# Alice
+# De Wereld van Alice
 
-## Website for a coffee shop WIP
+## Website for a coffee shop.
 
-#### Main Page: http://alice.mindfood.dev/alice/index.php
+http://alice.mindfood.dev/alice/index.php
 
-#### Admin Page: http://alice.mindfood.dev/alice/admin.php
+UI / UX, front- and back-end by me.
+
+This was my final project in my web developer course.

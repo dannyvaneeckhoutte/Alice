@@ -43,7 +43,6 @@
 <html lang="nl">
 
 <head>
-<<<<<<< HEAD
   <title>Alice - Aanmelden</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -79,39 +78,4 @@
       </div>
     </div>
   </div>
-=======
-   <title>Alice - Aanmelden</title>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-</head>
-
-<body class="bg-secondary">
-   <div class="login-wrapper">
-      <div class="row">
-         <div class="col-md-5 well mx-auto mt-5 p-5 bg-white rounded">
-            <h4 class="pb-3">Aanmelden</h4>
-
-            <form action="login.php" method="post">
-               <div class="form-group">
-                  <label for="gebruiker">Gebruikersnaam</label>
-                  <input type="text" name="gebruiker" class="form-control" />
-               </div>
-               <div class="form-group">
-                  <label for="wachtwoord">Wachtwoord</label>
-                  <input type="password" name="wachtwoord" class="form-control" />
-               </div>
-               <div class="form-group">
-                  <input type="submit" name="btnLogin" id="btnLogin" class="btn btn-primary" value="Aanmelden" />
-                  <h6 class="pt-2 text-danger"><?= $message;?></h6>
-               </div>
-            </form>
-         </div>
-      </div>
-   </div>
->>>>>>> 6427720319898bebc9a1472f55b4a58514f6f1aa
 </body>
